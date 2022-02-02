@@ -1,0 +1,338 @@
+{
+  "Uuid": "55aef521-60e1-47fa-8aab-cc23dcd6a2fa",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Accent Panel Selection",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "1ed05b32339a4d1a8171b2a83fd10513",
+      "Name": "Accent Panel Family",
+      "Type": "dropdownSelection",
+      "Value": "System Panel:Cp_Perf_Mtl",
+      "Description": "All family types available in the document.",
+      "SelectedIndex": 701
+    },
+    {
+      "Id": "33a4f66f417e47748e5ea08b85155a05",
+      "Name": "Select Accent Panel Locations",
+      "Type": "hostSelection",
+      "Value": "e09d95c8-826d-493e-b591-e297d45b4a08-002b9f52,e09d95c8-826d-493e-b591-e297d45b4a08-002b9f53,e09d95c8-826d-493e-b591-e297d45b4a08-002b9f54,e09d95c8-826d-493e-b591-e297d45b4a08-002b9f5a,e09d95c8-826d-493e-b591-e297d45b4a08-002b9f5b,e09d95c8-826d-493e-b591-e297d45b4a08-002b9f5c,e09d95c8-826d-493e-b591-e297d45b4a08-002b9f6e,e09d95c8-826d-493e-b591-e297d45b4a08-002b9f6f,e09d95c8-826d-493e-b591-e297d45b4a08-002b9f70,e09d95c8-826d-493e-b591-e297d45b4a08-002b9f76,e09d95c8-826d-493e-b591-e297d45b4a08-002b9f77,e09d95c8-826d-493e-b591-e297d45b4a08-002b9f78,e09d95c8-826d-493e-b591-e297d45b4a08-002ba2af,e09d95c8-826d-493e-b591-e297d45b4a08-002ba2b0,e09d95c8-826d-493e-b591-e297d45b4a08-002ba2b1,e09d95c8-826d-493e-b591-e297d45b4a08-002ba2b7,e09d95c8-826d-493e-b591-e297d45b4a08-002ba2b8,e09d95c8-826d-493e-b591-e297d45b4a08-002ba2b9,e09d95c8-826d-493e-b591-e297d45b4a08-002ba2cb,e09d95c8-826d-493e-b591-e297d45b4a08-002ba2cc,e09d95c8-826d-493e-b591-e297d45b4a08-002ba2cd,e09d95c8-826d-493e-b591-e297d45b4a08-002ba2d3,e09d95c8-826d-493e-b591-e297d45b4a08-002ba2d4,e09d95c8-826d-493e-b591-e297d45b4a08-002ba2d5,e09d95c8-826d-493e-b591-e297d45b4a08-002ba541,e09d95c8-826d-493e-b591-e297d45b4a08-002ba542,e09d95c8-826d-493e-b591-e297d45b4a08-002ba543,e09d95c8-826d-493e-b591-e297d45b4a08-002ba555,e09d95c8-826d-493e-b591-e297d45b4a08-002ba556,e09d95c8-826d-493e-b591-e297d45b4a08-002ba557,e09d95c8-826d-493e-b591-e297d45b4a08-002ba55d,e09d95c8-826d-493e-b591-e297d45b4a08-002ba55e,e09d95c8-826d-493e-b591-e297d45b4a08-002ba55f,e09d95c8-826d-493e-b591-e297d45b4a08-002ba571,e09d95c8-826d-493e-b591-e297d45b4a08-002ba572,e09d95c8-826d-493e-b591-e297d45b4a08-002ba573,e09d95c8-826d-493e-b591-e297d45b4a08-002ba7a7,e09d95c8-826d-493e-b591-e297d45b4a08-002ba7a8,e09d95c8-826d-493e-b591-e297d45b4a08-002ba7a9,e09d95c8-826d-493e-b591-e297d45b4a08-002ba7bb,e09d95c8-826d-493e-b591-e297d45b4a08-002ba7bd,e09d95c8-826d-493e-b591-e297d45b4a08-002ba7c9,e09d95c8-826d-493e-b591-e297d45b4a08-002ba7ca,e09d95c8-826d-493e-b591-e297d45b4a08-002ba7cb,e09d95c8-826d-493e-b591-e297d45b4a08-002ba7d7,e09d95c8-826d-493e-b591-e297d45b4a08-002ba7d8,e09d95c8-826d-493e-b591-e297d45b4a08-002ba7d9,e09d95c8-826d-493e-b591-e297d45b4a08-002ba91e,e09d95c8-826d-493e-b591-e297d45b4a08-002ba91f,e09d95c8-826d-493e-b591-e297d45b4a08-002ba920,e09d95c8-826d-493e-b591-e297d45b4a08-002ba926,e09d95c8-826d-493e-b591-e297d45b4a08-002ba927,e09d95c8-826d-493e-b591-e297d45b4a08-002ba928,e09d95c8-826d-493e-b591-e297d45b4a08-002ba934,e09d95c8-826d-493e-b591-e297d45b4a08-002ba935,e09d95c8-826d-493e-b591-e297d45b4a08-002ba936,e09d95c8-826d-493e-b591-e297d45b4a08-002ba948,e09d95c8-826d-493e-b591-e297d45b4a08-002ba949,e09d95c8-826d-493e-b591-e297d45b4a08-002ba94a,e09d95c8-826d-493e-b591-e297d45b4a08-002babe0,e09d95c8-826d-493e-b591-e297d45b4a08-002babe1,e09d95c8-826d-493e-b591-e297d45b4a08-002babe2,e09d95c8-826d-493e-b591-e297d45b4a08-002babee,e09d95c8-826d-493e-b591-e297d45b4a08-002babef,e09d95c8-826d-493e-b591-e297d45b4a08-002babf0,e09d95c8-826d-493e-b591-e297d45b4a08-002babf6,e09d95c8-826d-493e-b591-e297d45b4a08-002babf7,e09d95c8-826d-493e-b591-e297d45b4a08-002babf8,e09d95c8-826d-493e-b591-e297d45b4a08-002bac04,e09d95c8-826d-493e-b591-e297d45b4a08-002bac05,e09d95c8-826d-493e-b591-e297d45b4a08-002bac06",
+      "Description": "Select multiple elements from the Revit document filtered by Category.",
+      "SelectedIndex": 0
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "49a1293f-9a8b-4adf-a093-9815adf5e109",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "f4b7646c9d20432cadb305f9eb3da8db",
+      "Inputs": [
+        {
+          "Id": "1dc7e48b3fee4ae9b5d95a30d954e66c",
+          "Name": "familyInstance",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e6d853638b5b4ee7b0345956c1b6c831",
+          "Name": "familyType",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9007f7825cef406b9ff349a1d68854df",
+          "Name": "familyInstance",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "da85d209512948c5a343249997784aed",
+          "Name": "success",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Changes the family type of a given family instance to the specified type"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.CurtainPanel.AsFamilyInstance",
+      "Id": "9130c442c6d743e5bdf58ced65ef5f2c",
+      "Inputs": [
+        {
+          "Id": "30c6ca99d7b44f49b8be8d27cf3ebcfb",
+          "Name": "curtainPanel",
+          "Description": "Revit.Elements.CurtainPanel",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b5189ee58cb14632894fbc5dae42b4f9",
+          "Name": "FamilyInstance",
+          "Description": "FamilyInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets family instance from curtain Panel\n\nCurtainPanel.AsFamilyInstance ( ): FamilyInstance"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 701,
+      "SelectedString": "System Panel:Cp_Perf_Mtl",
+      "NodeType": "ExtensionNode",
+      "Id": "1ed05b32339a4d1a8171b2a83fd10513",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3845edc5865c41349a485724fe4f1def",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "Dynamo.ComboNodes.DSModelElementsByCategorySelection, DSRevitNodesUI",
+      "SelectedIndex": 168,
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002b9f52",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002b9f53",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002b9f54",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002b9f5a",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002b9f5b",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002b9f5c",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002b9f6e",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002b9f6f",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002b9f70",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002b9f76",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002b9f77",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002b9f78",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba2af",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba2b0",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba2b1",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba2b7",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba2b8",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba2b9",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba2cb",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba2cc",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba2cd",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba2d3",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba2d4",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba2d5",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba541",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba542",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba543",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba555",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba556",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba557",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba55d",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba55e",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba55f",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba571",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba572",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba573",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba7a7",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba7a8",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba7a9",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba7bb",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba7bd",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba7c9",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba7ca",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba7cb",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba7d7",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba7d8",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba7d9",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba91e",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba91f",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba920",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba926",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba927",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba928",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba934",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba935",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba936",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba948",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba949",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002ba94a",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002babe0",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002babe1",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002babe2",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002babee",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002babef",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002babf0",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002babf6",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002babf7",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002babf8",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002bac04",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002bac05",
+        "e09d95c8-826d-493e-b591-e297d45b4a08-002bac06"
+      ],
+      "Id": "33a4f66f417e47748e5ea08b85155a05",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fb05feb3c0d24db78cc815c90d271f36",
+          "Name": "Elements",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "b5189ee58cb14632894fbc5dae42b4f9",
+      "End": "1dc7e48b3fee4ae9b5d95a30d954e66c",
+      "Id": "4c46ad93a69e45768abb61e0d589c2cb"
+    },
+    {
+      "Start": "3845edc5865c41349a485724fe4f1def",
+      "End": "e6d853638b5b4ee7b0345956c1b6c831",
+      "Id": "22ac37f26ec24f7c866de92a6b43f403"
+    },
+    {
+      "Start": "fb05feb3c0d24db78cc815c90d271f36",
+      "End": "30c6ca99d7b44f49b8be8d27cf3ebcfb",
+      "Id": "af1c33df53464025b482cfb575d84487"
+    }
+  ],
+  "Dependencies": [
+    "49a1293f-9a8b-4adf-a093-9815adf5e109"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Clockwork for Dynamo 2.x",
+      "Version": "2.3.0",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "f4b7646c9d20432cadb305f9eb3da8db"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "FamilyInstance.SetType",
+        "Id": "f4b7646c9d20432cadb305f9eb3da8db",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 684.09212905079266,
+        "Y": -873.344870904653
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CurtainPanel.AsFamilyInstance",
+        "Id": "9130c442c6d743e5bdf58ced65ef5f2c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 328.43761796374019,
+        "Y": -908.90416242098706
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Accent Panel Family",
+        "Id": "1ed05b32339a4d1a8171b2a83fd10513",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 12.699218487796884,
+        "Y": -638.77592629192645
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Accent Panel Locations",
+        "Id": "33a4f66f417e47748e5ea08b85155a05",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 12.755478244550204,
+        "Y": -906.95914197155184
+      }
+    ],
+    "Annotations": [],
+    "X": 357.52616692567972,
+    "Y": 1119.5994756114651,
+    "Zoom": 0.95142542488527448
+  }
+}

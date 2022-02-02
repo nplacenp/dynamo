@@ -1,0 +1,379 @@
+{
+  "Uuid": "55aef521-60e1-47fa-8aab-cc23dcd6a2fa",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Window CW Cutouts",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "414bda6f2f8e45859d9fd411f56ba96d",
+      "Name": "Windows To Cut",
+      "Type": "hostSelection",
+      "Value": "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1c96,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1d38,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1d43,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1d4e,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1d64,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1de1,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1f9c,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fa0,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fa2,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fa4,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fa8,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1faa,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fba,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fbe,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fc0,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fc2,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fc6,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fc8,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fd8,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fdc,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fde,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fe0,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fe4,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fe6,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b20b4,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b20b8,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b20ba,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b20bc,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b20c0,2b5a67a5-7e54-444f-915a-716a4cda42f3-002b20c2",
+      "Description": "Select multiple elements from the Revit document filtered by Category.",
+      "SelectedIndex": 0
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 394,
+      "SelectedString": "Empty Panel:Empty Panel",
+      "NodeType": "ExtensionNode",
+      "Id": "49c933799f9f4626a0d0a7fd3f4dd083",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d3ca0eb15b184993babfc3a28a6f01a4",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetIntersectingElementsOfCategory@Revit.Elements.Category",
+      "Id": "eca8c199da554b6498834be8c008d865",
+      "Inputs": [
+        {
+          "Id": "4bdf22c0ec92416092178baecbb7655a",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "905cbe25add14cbcb10c9d1ca3b987a0",
+          "Name": "category",
+          "Description": "Category of Elements to check intersection against\n\nCategory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fcf2f7b8a9ee43eca36f627717afb935",
+          "Name": "Element[]",
+          "Description": "List of intersection elements of the specified category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets all Elements intersecting the input element, that are of a specific category.\n\nElement.GetIntersectingElementsOfCategory (category: Category): Element[]"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 168,
+      "SelectedString": "OST_CurtainWallPanels",
+      "NodeType": "ExtensionNode",
+      "Id": "3ebb71f081724e5d9de54ecc79c06649",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "13d92325058a4488b3ea72e344cc1c39",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "Dynamo.ComboNodes.DSModelElementsByCategorySelection, DSRevitNodesUI",
+      "SelectedIndex": 703,
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1c96",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1d38",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1d43",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1d4e",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1d64",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1de1",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1f9c",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fa0",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fa2",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fa4",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fa8",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1faa",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fba",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fbe",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fc0",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fc2",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fc6",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fc8",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fd8",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fdc",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fde",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fe0",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fe4",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b1fe6",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b20b4",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b20b8",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b20ba",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b20bc",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b20c0",
+        "2b5a67a5-7e54-444f-915a-716a4cda42f3-002b20c2"
+      ],
+      "Id": "414bda6f2f8e45859d9fd411f56ba96d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fddc414b68344377ab698bee80c49321",
+          "Name": "Elements",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.CurtainPanel.AsFamilyInstance",
+      "Id": "f627baeab79244c99dddb93839d26bf8",
+      "Inputs": [
+        {
+          "Id": "9cf5d30f175149c3a0375ce190c56c06",
+          "Name": "curtainPanel",
+          "Description": "Revit.Elements.CurtainPanel",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7285b1f436b2456c87774848b9e1fd9f",
+          "Name": "FamilyInstance",
+          "Description": "FamilyInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets family instance from curtain Panel\n\nCurtainPanel.AsFamilyInstance ( ): FamilyInstance"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "49a1293f-9a8b-4adf-a093-9815adf5e109",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "e7660093458741519b441d9acbc2aac1",
+      "Inputs": [
+        {
+          "Id": "a6ac766fd6b94e6c890bd8111d402ded",
+          "Name": "familyInstance",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a58081cf899e4569a70be64269228916",
+          "Name": "familyType",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ee4e09915d8d40a0ae89523cfc6cad82",
+          "Name": "familyInstance",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fc2a865cd5fb4b2e9d7e92e4d05759ce",
+          "Name": "success",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Changes the family type of a given family instance to the specified type"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "d3ca0eb15b184993babfc3a28a6f01a4",
+      "End": "a58081cf899e4569a70be64269228916",
+      "Id": "1754938f1caa46939364948f3ba324c6"
+    },
+    {
+      "Start": "fcf2f7b8a9ee43eca36f627717afb935",
+      "End": "9cf5d30f175149c3a0375ce190c56c06",
+      "Id": "a489a71451a8494fbda3b4e74c4f835f"
+    },
+    {
+      "Start": "13d92325058a4488b3ea72e344cc1c39",
+      "End": "905cbe25add14cbcb10c9d1ca3b987a0",
+      "Id": "2430d44083d447689f4e30dcbc252ba8"
+    },
+    {
+      "Start": "fddc414b68344377ab698bee80c49321",
+      "End": "4bdf22c0ec92416092178baecbb7655a",
+      "Id": "a7011003b0194e3781583feab03f0a72"
+    },
+    {
+      "Start": "7285b1f436b2456c87774848b9e1fd9f",
+      "End": "a6ac766fd6b94e6c890bd8111d402ded",
+      "Id": "965d0a8d22fc4a808bff06d430c895a3"
+    }
+  ],
+  "Dependencies": [
+    "49a1293f-9a8b-4adf-a093-9815adf5e109"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Clockwork for Dynamo 2.x",
+      "Version": "2.3.0",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "e7660093458741519b441d9acbc2aac1"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Family Types",
+        "Id": "49c933799f9f4626a0d0a7fd3f4dd083",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1949.2529696664699,
+        "Y": 48.2879400503507
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.GetIntersectingElementsOfCategory",
+        "Id": "eca8c199da554b6498834be8c008d865",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1580.998709564831,
+        "Y": -64.533767519590015
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Categories",
+        "Id": "3ebb71f081724e5d9de54ecc79c06649",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1179.458369772655,
+        "Y": 104.30686697390075
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Windows To Cut",
+        "Id": "414bda6f2f8e45859d9fd411f56ba96d",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1179.6402988459686,
+        "Y": -161.58356311865055
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CurtainPanel.AsFamilyInstance",
+        "Id": "f627baeab79244c99dddb93839d26bf8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1936.0240963685094,
+        "Y": -64.006941486378707
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FamilyInstance.SetType",
+        "Id": "e7660093458741519b441d9acbc2aac1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2380.2519435051368,
+        "Y": -78.999795887915127
+      }
+    ],
+    "Annotations": [],
+    "X": -857.721351157234,
+    "Y": 370.08929237328704,
+    "Zoom": 0.86036146260978286
+  }
+}

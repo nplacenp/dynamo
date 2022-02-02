@@ -1,0 +1,313 @@
+{
+  "Uuid": "55aef521-60e1-47fa-8aab-cc23dcd6a2fa",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ResetCW",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "b9011c225c76490db4c99f484b593cb8",
+      "Name": "CW To Reset",
+      "Type": "hostSelection",
+      "Value": "83d8d345-c0fe-4b3d-a089-357004694c18-002b2b00",
+      "Description": "Select a model element from the Revit document filtered by Category.",
+      "SelectedIndex": 0
+    },
+    {
+      "Id": "9ed7b7cff0db45aeba36758bfdb3f149",
+      "Name": "Default Panel For Reset",
+      "Type": "dropdownSelection",
+      "Value": "System Panel:Cp_Glazing_Vision_1/2\"",
+      "Description": "All family types available in the document.",
+      "SelectedIndex": 658
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.ComboNodes.DSModelElementByCategorySelection, DSRevitNodesUI",
+      "SelectedIndex": 686,
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "83d8d345-c0fe-4b3d-a089-357004694c18-002b2b00"
+      ],
+      "Id": "b9011c225c76490db4c99f484b593cb8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "39de7d0af6d047dcb5e87ee47f4226ab",
+          "Name": "Element",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.CurtainPanel.ByElement@Revit.Elements.Element",
+      "Id": "784ee2c627b64cf48db837a803ca823e",
+      "Inputs": [
+        {
+          "Id": "65ea0f36dcd843d5be70ad1954435c98",
+          "Name": "hostingElement",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3374d3cfdc9e4e08ba83a00db78aa2e0",
+          "Name": "CurtainPanel[]",
+          "Description": "CurtainPanel[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "get all panels of curtain wall, system or slope glazing roof\n\nCurtainPanel.ByElement (hostingElement: Element): CurtainPanel[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.CurtainPanel.AsFamilyInstance",
+      "Id": "3c603449575b470a8edaaebc228ea7a2",
+      "Inputs": [
+        {
+          "Id": "88d6e8cedacf4cf8a3566873b0e0059c",
+          "Name": "curtainPanel",
+          "Description": "Revit.Elements.CurtainPanel",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "efad1f83260c4828a2120510f1d00c1d",
+          "Name": "FamilyInstance",
+          "Description": "FamilyInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets family instance from curtain Panel\n\nCurtainPanel.AsFamilyInstance ( ): FamilyInstance"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "49a1293f-9a8b-4adf-a093-9815adf5e109",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "9730e42db997431bbf4a7e496bf845e0",
+      "Inputs": [
+        {
+          "Id": "76e77e76926e4923ab09ba8742ffa6c9",
+          "Name": "familyInstance",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8712b21868814d1ba5938faa6f06740f",
+          "Name": "familyType",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "49069cc7528a45c78bab1a058445d390",
+          "Name": "familyInstance",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "826544d50b5b4615a70326118c687f26",
+          "Name": "success",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Changes the family type of a given family instance to the specified type"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 658,
+      "SelectedString": "System Panel:Cp_Glazing_Vision_1/2\"",
+      "NodeType": "ExtensionNode",
+      "Id": "9ed7b7cff0db45aeba36758bfdb3f149",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0cbc401689b7444a9aaedef9a32769db",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "39de7d0af6d047dcb5e87ee47f4226ab",
+      "End": "65ea0f36dcd843d5be70ad1954435c98",
+      "Id": "7f23dea50c2f4416a50edb0ccedc8c0d"
+    },
+    {
+      "Start": "3374d3cfdc9e4e08ba83a00db78aa2e0",
+      "End": "88d6e8cedacf4cf8a3566873b0e0059c",
+      "Id": "29a1e0cdc841421a9143e337db9dfcd0"
+    },
+    {
+      "Start": "efad1f83260c4828a2120510f1d00c1d",
+      "End": "76e77e76926e4923ab09ba8742ffa6c9",
+      "Id": "8c21dac8f2f042b2b5537495eaf4634e"
+    },
+    {
+      "Start": "0cbc401689b7444a9aaedef9a32769db",
+      "End": "8712b21868814d1ba5938faa6f06740f",
+      "Id": "a97a0d111ff44b7aba110011972e64fb"
+    }
+  ],
+  "Dependencies": [
+    "49a1293f-9a8b-4adf-a093-9815adf5e109"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Clockwork for Dynamo 2.x",
+      "Version": "2.3.0",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "9730e42db997431bbf4a7e496bf845e0"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.0.5650",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "CW To Reset",
+        "Id": "b9011c225c76490db4c99f484b593cb8",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1504.9243038054817,
+        "Y": 366.844900812324
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CurtainPanel.ByElement",
+        "Id": "784ee2c627b64cf48db837a803ca823e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1737.9784017278614,
+        "Y": 437.92440604751619
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CurtainPanel.AsFamilyInstance",
+        "Id": "3c603449575b470a8edaaebc228ea7a2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2109.1739187963658,
+        "Y": 267.59120770523396
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FamilyInstance.SetType",
+        "Id": "9730e42db997431bbf4a7e496bf845e0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2438.6580822165165,
+        "Y": 484.75545003240529
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Default Panel For Reset",
+        "Id": "9ed7b7cff0db45aeba36758bfdb3f149",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1720.0590855009671,
+        "Y": 606.21922261786324
+      }
+    ],
+    "Annotations": [],
+    "X": -1180.6982202055165,
+    "Y": 82.529991752790124,
+    "Zoom": 0.89087438531173024
+  }
+}

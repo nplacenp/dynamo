@@ -1,0 +1,780 @@
+{
+  "Uuid": "55aef521-60e1-47fa-8aab-cc23dcd6a2fa",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "DynamicGrid",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.ComboNodes.DSModelElementByCategorySelection, DSRevitNodesUI",
+      "SelectedIndex": 686,
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "5cfe6525-12e3-431c-9611-87bfa0d98a3c-004afa74"
+      ],
+      "Id": "b9011c225c76490db4c99f484b593cb8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "39de7d0af6d047dcb5e87ee47f4226ab",
+          "Name": "Element",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Rhythm.Revit.Elements.CurtainGridLine.AllSegmentCurves@Revit.Elements.Element",
+      "Id": "fbf5324884ca493193a99ff32e4d0150",
+      "Inputs": [
+        {
+          "Id": "3626fdaf788c453796bf38673af0fcf0",
+          "Name": "curtainGridLine",
+          "Description": "The curtain gridline to get data from.\n\nElement",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e0eb5acf018a47a2a2211f75e458ead4",
+          "Name": "AllSegmentCurves",
+          "Description": "The segments that make up the curtain grid.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "This node will retrieve the geometric curve segments from the curtain wall.\n\nCurtainGridLine.AllSegmentCurves (curtainGridLine: Element): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Rhythm.Revit.Elements.CurtainGrid.ByWallElement@Revit.Elements.Wall",
+      "Id": "33f3758f7b6e4395b0acb1cb1c0d221a",
+      "Inputs": [
+        {
+          "Id": "dd05de5be7794d4e88ede86d73fac1c9",
+          "Name": "curtainWall",
+          "Description": "The curtain gridline to get data from.\n\nWall",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f5be097a1d46490eb4194c3a8f07151b",
+          "Name": "curtainGrid",
+          "Description": "The internal curtain grid.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4d09fbd5c1f6416a9b67f8986cbd214d",
+          "Name": "uGrids",
+          "Description": "The grids in the U direction, (horizontal).",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "686a7c667e004df98cf402d75d3c2167",
+          "Name": "vGrids",
+          "Description": "The grids in the V direction, (vertical).",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "This node will retrieve the curtain grid and U/V Gridlines from the given wall\n\nCurtainGrid.ByWallElement (curtainWall: Wall): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.Curves",
+      "Id": "9dcc4ae8d27c490897d3ecc0f93d0e26",
+      "Inputs": [
+        {
+          "Id": "270e00cd46dc4939af9856b345f5a1ec",
+          "Name": "polyCurve",
+          "Description": "Autodesk.DesignScript.Geometry.PolyCurve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1b702d99ca094f809e2fe9912f86d84a",
+          "Name": "Curve[]",
+          "Description": "Curve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns curves of the polycurve\n\nPolyCurve.Curves ( ): Curve[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Rhythm.Revit.Elements.CurtainGridLine.RemoveSegment@Revit.Elements.Element,Autodesk.DesignScript.Geometry.Curve[]",
+      "Id": "0ebae52e719f4e4a9711151e3cd6a4fc",
+      "Inputs": [
+        {
+          "Id": "8540cafa928849eab53080e2809ca3d1",
+          "Name": "curtainGridLine",
+          "Description": "The curtain gridline to remove segments from.\n\nElement",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8b19fd7512944a5689e128cbfc0849c1",
+          "Name": "curves",
+          "Description": "The curves that represent the grid segment to remove.\n\nCurve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "010134f19229492681ee548476ef37ea",
+          "Name": "curtainGridLine",
+          "Description": "The curtain grid that was supplied.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "This node will remove the given curve segments from the curtain grid line.\n\nCurtainGridLine.RemoveSegment (curtainGridLine: Element, curves: Curve[]): Element"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Count@var[]..[]",
+      "Id": "77edd36cf11b49518fe8310db4542587",
+      "Inputs": [
+        {
+          "Id": "75aee32cc5ff46f1a9a77f00daf283b9",
+          "Name": "list",
+          "Description": "List to get the item count of.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "612f76d0a7a14f75b4300e9b492d9ac9",
+          "Name": "count",
+          "Description": "List length.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the number of items stored in the given list.\n\nList.Count (list: var[]..[]): int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "x - 1;",
+      "Id": "a00d19f70288467cb88a221eac616c5e",
+      "Inputs": [
+        {
+          "Id": "a56fd3f1c80046e1b2a67cfdafa7e0fd",
+          "Name": "x",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5ad031bf883a4a1ba75795358887f7d1",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "994a0be3f54a411f97a2c0a152f4b482",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9c7e07b4558b4739b4c1ba3cca68157c",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Integer",
+      "InputValue": 100,
+      "MaximumValue": 100,
+      "MinimumValue": 0,
+      "StepValue": 1,
+      "Id": "9b55873b3f1e4f5583d49c5ee29d80a0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "68d8ce6ee6934564bc487358a8c2de4b",
+          "Name": "",
+          "Description": "Int64",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces integer values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "2f1190c6-10f5-4698-a0c1-487f2fa07882",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "bf9e27ac437d4c34a6bbbd67de807ea6",
+      "Inputs": [
+        {
+          "Id": "9aa5c7ee96b24d4eaa0e2254f9e31d73",
+          "Name": "min",
+          "Description": "int\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c1ca4a0b19004058ae4452992f15e25a",
+          "Name": "max",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "92863f606ea940a9936e4265937a7653",
+          "Name": "amount",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "065edfaebb574053afe6576996505980",
+          "Name": "seed",
+          "Description": "int\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ea955fce5d444d159fff69d212a3e8bf",
+          "Name": "list",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a list of random integers between 0 and a given maximum value"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Integer",
+      "InputValue": 72,
+      "MaximumValue": 100,
+      "MinimumValue": 0,
+      "StepValue": 1,
+      "Id": "29d6cc8bb51f46218dcd4eaeaea52a60",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ab8daaea27e246d08e05247e99d7500d",
+          "Name": "",
+          "Description": "Int64",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces integer values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "3c6b64e0db1448de99f57cc9e4b62973",
+      "Inputs": [
+        {
+          "Id": "ca76fa288e4a475bb98d8775c1a6264f",
+          "Name": "list",
+          "Description": "List to flatten.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1b93a58dec2e4035aa868cd7363797cc",
+          "Name": "amt",
+          "Description": "Layers of nesting to remove.\n\nint\nDefault value : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "74b23c36dd504679802a68c5c179d860",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amt: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1;",
+      "Id": "556014eff59d4044be91daeeb87015f1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6d08fe497d5149259508f38c7f860312",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "77f0b7c7b82b442ea2d90bf85bd78761",
+      "Inputs": [
+        {
+          "Id": "035ffd596e294814b8be73aa0c46e32d",
+          "Name": "list",
+          "Description": "List to fetch an item from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dd16d50ae7b3451ab14b7f0517c4a0bf",
+          "Name": "index",
+          "Description": "Index of the item to be fetched.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1fe344e4488048a9b0df600a831c14ac",
+          "Name": "item",
+          "Description": "Item in the list at the given index.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns an item from the given list that's located at the specified index.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Count@var[]..[]",
+      "Id": "41692a6cfd4747aebbe19c896e275450",
+      "Inputs": [
+        {
+          "Id": "d4195f925d154cc78f3c53e55a3df173",
+          "Name": "list",
+          "Description": "List to get the item count of.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "670663a6b43f457ebaeb0419987a1394",
+          "Name": "count",
+          "Description": "List length.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the number of items stored in the given list.\n\nList.Count (list: var[]..[]): int"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "39de7d0af6d047dcb5e87ee47f4226ab",
+      "End": "dd05de5be7794d4e88ede86d73fac1c9",
+      "Id": "20a4be31598543a0be6c6dbcf79fc863"
+    },
+    {
+      "Start": "e0eb5acf018a47a2a2211f75e458ead4",
+      "End": "270e00cd46dc4939af9856b345f5a1ec",
+      "Id": "732d7f94dc9b45598caa42992fa90093"
+    },
+    {
+      "Start": "686a7c667e004df98cf402d75d3c2167",
+      "End": "3626fdaf788c453796bf38673af0fcf0",
+      "Id": "53dda1117bd7468dbc88784b96205acf"
+    },
+    {
+      "Start": "686a7c667e004df98cf402d75d3c2167",
+      "End": "8540cafa928849eab53080e2809ca3d1",
+      "Id": "696ef239adb9479a965552373dd8b508"
+    },
+    {
+      "Start": "1b702d99ca094f809e2fe9912f86d84a",
+      "End": "75aee32cc5ff46f1a9a77f00daf283b9",
+      "Id": "c0ba9f78147e46b084ea70e375154893"
+    },
+    {
+      "Start": "1b702d99ca094f809e2fe9912f86d84a",
+      "End": "ca76fa288e4a475bb98d8775c1a6264f",
+      "Id": "ffc8ea4689614b8c8ebfc1e0ed4238d5"
+    },
+    {
+      "Start": "612f76d0a7a14f75b4300e9b492d9ac9",
+      "End": "92863f606ea940a9936e4265937a7653",
+      "Id": "4f55c4a9203d410d967aa2c81e11e668"
+    },
+    {
+      "Start": "5ad031bf883a4a1ba75795358887f7d1",
+      "End": "c1ca4a0b19004058ae4452992f15e25a",
+      "Id": "6c6b3f32bc5d41ab96d2452052ca2abf"
+    },
+    {
+      "Start": "9c7e07b4558b4739b4c1ba3cca68157c",
+      "End": "9aa5c7ee96b24d4eaa0e2254f9e31d73",
+      "Id": "c08f3a4484ea4d0f98f9548ea82e99b6"
+    },
+    {
+      "Start": "68d8ce6ee6934564bc487358a8c2de4b",
+      "End": "065edfaebb574053afe6576996505980",
+      "Id": "476cb3045a2d440c8ca1962a9039a7bc"
+    },
+    {
+      "Start": "ea955fce5d444d159fff69d212a3e8bf",
+      "End": "dd16d50ae7b3451ab14b7f0517c4a0bf",
+      "Id": "e552333809d446699156baceb36a61a0"
+    },
+    {
+      "Start": "74b23c36dd504679802a68c5c179d860",
+      "End": "d4195f925d154cc78f3c53e55a3df173",
+      "Id": "3b0a2355c4ee41669bcd97d3414cb95f"
+    },
+    {
+      "Start": "74b23c36dd504679802a68c5c179d860",
+      "End": "035ffd596e294814b8be73aa0c46e32d",
+      "Id": "fb29168f067c490dabf52a84410cc6c6"
+    },
+    {
+      "Start": "6d08fe497d5149259508f38c7f860312",
+      "End": "1b93a58dec2e4035aa868cd7363797cc",
+      "Id": "780967bca7ea4b8982978795edb12306"
+    },
+    {
+      "Start": "1fe344e4488048a9b0df600a831c14ac",
+      "End": "8b19fd7512944a5689e128cbfc0849c1",
+      "Id": "c43ff6de014d4430a8511401fac3da92"
+    },
+    {
+      "Start": "670663a6b43f457ebaeb0419987a1394",
+      "End": "a56fd3f1c80046e1b2a67cfdafa7e0fd",
+      "Id": "bd94598079a74393926d8551f5d98123"
+    }
+  ],
+  "Dependencies": [
+    "2f1190c6-10f5-4698-a0c1-487f2fa07882"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Rhythm",
+      "Version": "2021.7.3",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "fbf5324884ca493193a99ff32e4d0150",
+        "33f3758f7b6e4395b0acb1cb1c0d221a",
+        "0ebae52e719f4e4a9711151e3cd6a4fc"
+      ]
+    },
+    {
+      "Name": "Clockwork for Dynamo 2.x",
+      "Version": "2.3.0",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "bf9e27ac437d4c34a6bbbd67de807ea6"
+      ]
+    }
+  ],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.10.1.3976",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 2.6367206573486328,
+      "EyeY": 27.626682281494141,
+      "EyeZ": 6.0798425674438477,
+      "LookX": -1.4841766357421875,
+      "LookY": -0.46156120300292969,
+      "LookZ": 0.90277099609375,
+      "UpX": -0.037266619503498077,
+      "UpY": 0.99904823303222656,
+      "UpZ": 0.0226677805185318
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "curtain wall to panelize",
+        "Id": "b9011c225c76490db4c99f484b593cb8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6.5971085809745773,
+        "Y": -20.606452105361768
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "ʳʰʸᵗʰᵐ|CurtainGridLine.AllSegmentCurves",
+        "Id": "fbf5324884ca493193a99ff32e4d0150",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 827.00920789820634,
+        "Y": -479.41039645983312
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "ʳʰʸᵗʰᵐ|CurtainGrid.ByWallElement",
+        "Id": "33f3758f7b6e4395b0acb1cb1c0d221a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 383.79833730253472,
+        "Y": -684.31050719673431
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "PolyCurve.Curves",
+        "Id": "9dcc4ae8d27c490897d3ecc0f93d0e26",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1248.3654515405246,
+        "Y": -383.09492088711789
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "ʳʰʸᵗʰᵐ|CurtainGridLine.RemoveSegment",
+        "Id": "0ebae52e719f4e4a9711151e3cd6a4fc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3130.3700813639139,
+        "Y": -1247.7808084216417
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Count",
+        "Id": "77edd36cf11b49518fe8310db4542587",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1869.624753369653,
+        "Y": -72.449556591096439
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "a00d19f70288467cb88a221eac616c5e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1987.8409727862008,
+        "Y": 369.44811003476713
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "994a0be3f54a411f97a2c0a152f4b482",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2424.9119423743759,
+        "Y": -65.869430796733241
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Integer Slider",
+        "Id": "9b55873b3f1e4f5583d49c5ee29d80a0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -8.8007303869751468,
+        "Y": 188.59084825559864
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "RandomList.AsIntegers",
+        "Id": "bf9e27ac437d4c34a6bbbd67de807ea6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2605.0483191931189,
+        "Y": -0.13715413146144328
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Integer Slider",
+        "Id": "29d6cc8bb51f46218dcd4eaeaea52a60",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1592.0525729134533,
+        "Y": -474.12364838177751
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Flatten",
+        "Id": "3c6b64e0db1448de99f57cc9e4b62973",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1686.98810852285,
+        "Y": -687.79231149565862
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "556014eff59d4044be91daeeb87015f1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1394.7811830359251,
+        "Y": -604.89593208370115
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.GetItemAtIndex",
+        "Id": "77f0b7c7b82b442ea2d90bf85bd78761",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2697.5306781512559,
+        "Y": -1394.9641529768162
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Count",
+        "Id": "41692a6cfd4747aebbe19c896e275450",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1863.8988072228781,
+        "Y": -165.10280739078945
+      }
+    ],
+    "Annotations": [],
+    "X": 555.06133723586686,
+    "Y": 16.577856683004313,
+    "Zoom": 1.615294725810259
+  }
+}
