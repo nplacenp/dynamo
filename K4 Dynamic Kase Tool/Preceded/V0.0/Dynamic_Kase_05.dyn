@@ -1,0 +1,960 @@
+<Workspace Version="1.3.2.2480" X="4498.60005913961" Y="2872.34039923215" zoom="0.241774958228512" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="List.join" resolvedName="DSCore.List" assemblyName="DSCoreNodes.dll" />
+    <ClassMap partialName="List.GroupByKey" resolvedName="DSCore.List" assemblyName="DSCoreNodes.dll" />
+    <ClassMap partialName="List.create" resolvedName="DSCore.List" assemblyName="DSCoreNodes.dll" />
+    <ClassMap partialName="FamilyType.Name" resolvedName="Revit.Elements.FamilyType" assemblyName="RevitNodes.dll" />
+    <ClassMap partialName="String" resolvedName="DSCore.String" assemblyName="DSCoreNodes.dll" />
+    <ClassMap partialName="List" resolvedName="DSCore.List" assemblyName="DSCoreNodes.dll" />
+    <ClassMap partialName="DSCore.Object" resolvedName="DSCore.Object" assemblyName="DSCoreNodes.dll" />
+    <ClassMap partialName="DSCore.Color" resolvedName="DSCore.Color" assemblyName="DSCoreNodes.dll" />
+    <ClassMap partialName="DSCore.Object.Identity" resolvedName="DSCore.Object" assemblyName="DSCoreNodes.dll" />
+    <ClassMap partialName="Manage" resolvedName="Lists.Manage" assemblyName="LunchBox.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="cb12732b-9f21-48ac-b401-7847ec961b35" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="34800.4706258987" y="-3988.13942960877" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="" ShouldFocus="false" />
+    <DSRevitNodesUI.ElementTypes guid="acd099cb-e410-414c-be5c-c53386979e67" type="DSRevitNodesUI.ElementTypes" nickname="Element Types" x="-19810.1444764738" y="-9038.88022154585" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" index="145:GroupType" />
+    <DSRevitNodesUI.ElementsOfType guid="4b3c2f92-3c46-4a88-b4cc-1aa5109c549c" type="DSRevitNodesUI.ElementsOfType" nickname="All Elements of Type" x="-19637.1419167706" y="-9038.4471644319" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </DSRevitNodesUI.ElementsOfType>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="b4211481-5057-47e0-b34a-a41eda07a11f" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Document.Current" x="-19810.0268026593" y="-10010.9912155731" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Application.Document.Current" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="3c2e1b21-ca91-47ef-bb7f-032460b25936" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Document.ActiveView" x="-19582.0268026593" y="-10010.9912155731" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Application.Document.ActiveView">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Watch guid="443ea2b5-76f5-4c4a-8604-9d49d7957d2e" type="CoreNodeModels.Watch" nickname="Watch" x="-19273.0268026593" y="-10010.9912155731" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Watch>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="c2c2d81c-c684-428d-bf25-e0ecca6f4eba" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Select.ByCategoryAndView" x="-18883.0268026593" y="-10077.9912155731" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="C:\Users\Nick.Place\AppData\Roaming\Dynamo\Dynamo Revit\1.3\packages\archi-lab.net\bin\archilab.dll" function="archilab.Revit.Selection.Select.ByCategoryAndView@Revit.Elements.Category,Revit.Elements.Views.View">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <DSRevitNodesUI.Categories guid="bd3ef51d-c468-4bd9-8154-f8c26906aca2" type="DSRevitNodesUI.Categories" nickname="Categories" x="-19273.0268026593" y="-10118.9912155731" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" index="320:IOSModelGroups" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="9ce6cefa-418d-4928-890f-3ab7fc6509de" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="FamilyType.Name" x="-16967.1927318438" y="-10046.1206337202" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.FamilyType.Name">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Nodes.DSModelElementSelection guid="3d61f23c-0a97-4c9d-b509-513cd1f853bc" type="Dynamo.Nodes.DSModelElementSelection" nickname="SELECT SCOPE BOX" x="-18643.0889127374" y="-10165.3509553271" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <instance id="33b8316c-c1f4-4364-9047-5a2ced2e2319-002c7f89" />
+    </Dynamo.Nodes.DSModelElementSelection>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="b8b49f98-0470-48dc-9375-a4052f00a2cd" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Element.Geometry" x="-18393.5421085107" y="-10163.0458905255" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Element.Geometry">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="321bc391-5ab2-4a7a-8ff8-41badd9bc334" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-18528.6108905662" y="-10044.4853237497" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="{3,4,6,8};" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="9dbb7ba9-a3a3-4a89-ad64-ae900fe311ab" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.GetItemAtIndex" x="-18063.9778310329" y="-10172.4093239652" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.GetItemAtIndex@var[]..[],int">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="540aea8f-c4de-40aa-a9a0-2a6275998cdc" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="BoundingBox.ByCorners" x="-17513.3207482998" y="-10087.7749146397" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.BoundingBox.ByCorners@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="ac76ae01-2738-4ae2-9a93-37afcccf4077" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="BoundingBox.GetElementsInside" x="-17230.1504503331" y="-10099.8138199566" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="C:\Users\Nick.Place\AppData\Roaming\Dynamo\Dynamo Revit\1.3\packages\bimorphNodes\bin\BimorphNodes.dll" function="Revit.BoundingBox.GetElementsInside@Autodesk.DesignScript.Geometry.BoundingBox,Revit.Elements.Element[],double">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Input.IntegerSlider guid="f71349d9-6d90-4a54-baa8-032069beed86" type="CoreNodeModels.Input.IntegerSlider" nickname="Integer Slider" x="-18528.9291714902" y="-9927.76850260712" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <System.Int32>0</System.Int32>
+      <Range min="0" max="12" step="1" />
+    </CoreNodeModels.Input.IntegerSlider>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="6a542144-ede7-474c-bff3-f5923ea9fa9d" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Curve.EndPoint" x="-17797.3723786969" y="-10187.9616770949" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Curve.EndPoint">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="4f74f26e-b0a0-4529-970e-dee4b1cd51b1" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.GetItemAtIndex" x="-18064.7168414752" y="-10032.5823878597" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.GetItemAtIndex@var[]..[],int">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Input.IntegerSlider guid="9df27602-6710-46e4-8ee4-a3553b5af28e" type="CoreNodeModels.Input.IntegerSlider" nickname="Integer Slider" x="-18528.3168922487" y="-9864.96507848023" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <System.Int32>5</System.Int32>
+      <Range min="0" max="12" step="1" />
+    </CoreNodeModels.Input.IntegerSlider>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="48219434-e81a-4ada-a9e9-9d49839d7885" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Curve.EndPoint" x="-17802.5553030983" y="-10015.9948293101" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Curve.EndPoint">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="965e896c-587e-4ca7-a7f8-87aaf9afcf22" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="String.Contains" x="-16586.5123285864" y="-10131.8970566642" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.String.Contains@string,string,bool">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="54623637-c5c8-4961-a674-64482df35093" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-16706.2084942269" y="-10076.2871971544" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;K4_EC&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="16d35715-37d5-475a-9932-d72571f57a02" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.FilterByBoolMask" x="-16345.5468867562" y="-10202.2629636605" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="343b845e-65e5-4fa6-8f45-22a6b9839ebd" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-15734.2887038781" y="-10088.3704536624" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Unit&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="dc0e184e-8cc2-4c7c-a2ae-b996967f2217" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="String.Contains" x="-15615.572611999" y="-10142.6417715238" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.String.Contains@string,string,bool">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="58a7b684-fcc2-4f88-b540-64e6c00a7655" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="FamilyType.Name" x="-15942.2129211221" y="-10245.9716283858" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.FamilyType.Name">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="70ffc164-1992-4eaf-baab-0fb9d0f0b6e3" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CLADDING WALL PANELS" x="-16141.9284810288" y="-10187.3582224994" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.Object.Identity@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="cba3f5b7-52fc-4354-ab09-6fdaf9b3113f" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.FilterByBoolMask" x="-15330.4439235182" y="-10245.5419826939" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="0c22ebab-be22-469d-9df7-7e60343b5d8c" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="INDIVIDUAL CLADDING PANELS" x="-15132.0222025509" y="-10216.3243613062" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.Object.Identity@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="0ab6539a-d975-474d-84d2-b7e3331ba891" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="EXTERIOR CLADDING PANELS" x="-18923.8926525821" y="-9034.07667062274" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.Object.Identity@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="40c39480-d22a-4ca5-8a1c-58fcf87f9903" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="SINGLE CLADDING PANELS" x="-18216.8500800173" y="-9036.46141606569" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.Object.Identity@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="6ab9825c-d73c-4ecb-993d-51a35e53ddc6" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search Criteria" x="-18834.2762194085" y="-9113.60684080595" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Unit&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="a8770d32-0b96-47bd-95ee-9b74d7feaf96" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search Criteria" x="-17925.4334822316" y="-9244.12111855467" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;K4_EC10&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="0b1de430-ebec-490a-8b8d-11562a1632e0" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search By Family Type Name" x="-17801.7118414635" y="-9320.99789890599" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t1 = t2.Name;&#xA;t3 = String.Contains(t1, t4, false);&#xA;t5 = List.FilterByBoolMask(t2, t3);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);&#xA;t8 = DSCore.Object.Identity(t6);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="da00240b-3f4c-4886-b885-a4f1b5658d3f" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search By Family Type Name" x="-19415.1033784192" y="-9116.09592310525" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t1 = t2.Name;&#xA;t3 = String.Contains(t1, t4, false);&#xA;t5 = List.FilterByBoolMask(t2, t3);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);&#xA;t8 = DSCore.Object.Identity(t6);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="849ee31e-c1a7-4793-80a6-d47268b31fd5" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search Criteria" x="-19542.0228634803" y="-9116.95686596488" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;K4_EC&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="9fa9fd12-5e0f-4d13-83ce-dec88b9ca9c5" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search By Family Type Name" x="-18711.9311801373" y="-9117.34456051147" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t1 = t2.Name;&#xA;t3 = String.Contains(t1, t4, false);&#xA;t5 = List.FilterByBoolMask(t2, t3);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);&#xA;t8 = DSCore.Object.Identity(t6);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="54703ff8-9ffa-426e-8a37-825f34fb0c96" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="10'-0&quot; PANELS" x="-17306.6354012425" y="-9239.48481553587" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.Object.Identity@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Watch guid="99f42f68-fc7c-4ef1-85d5-a1bc91a60ecc" type="CoreNodeModels.Watch" nickname="Watch" x="-18172.6833785339" y="-8912.75639060549" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Watch>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="31d5b912-12ff-4327-a96b-b17930a32c5e" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="FamilyType.Name" x="-18462.8310836726" y="-8692.2473156723" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.FamilyType.Name">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="35202e4a-7373-4e41-9acf-4a10a41cc948" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="14'-0&quot; PANELS" x="-17291.6441895211" y="-8793.79497562892" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.Object.Identity@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="b6c6780e-2f65-4a1f-8223-cb1f200df7a5" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search By Family Type Name" x="-17789.6160333084" y="-8877.11110824151" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t1 = t2.Name;&#xA;t3 = String.Contains(t1, t4, false);&#xA;t5 = List.FilterByBoolMask(t2, t3);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);&#xA;t8 = DSCore.Object.Identity(t6);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="ec1da78c-b750-42dd-9b85-006cc1e552aa" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search Criteria" x="-17923.5254583715" y="-8800.23432789019" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;K4_EC14&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="7764f511-19e3-4681-8535-82edc84bc408" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="13'-0&quot; PANELS" x="-17291.194070756" y="-9020.08813514497" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.Object.Identity@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="3d8ec7e4-3d49-4fce-9188-5507b0063a79" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search By Family Type Name" x="-17787.655403367" y="-9102.45020053967" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t1 = t2.Name;&#xA;t3 = String.Contains(t1, t4, false);&#xA;t5 = List.FilterByBoolMask(t2, t3);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);&#xA;t8 = DSCore.Object.Identity(t6);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="ef25f002-e98e-4436-bafc-a6d6a93b638f" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search Criteria" x="-17921.5648284301" y="-9025.57342018835" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;K4_EC13&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="a302a51f-eada-4074-901e-fbd62f3b93ad" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="15'-0&quot; PANELS" x="-17296.8862194298" y="-8574.4915927078" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.Object.Identity@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="80cb1859-7bdc-43e8-ba34-678e6cb79600" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search By Family Type Name" x="-17795.1407153297" y="-8657.93708659632" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t1 = t2.Name;&#xA;t3 = String.Contains(t1, t4, false);&#xA;t5 = List.FilterByBoolMask(t2, t3);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);&#xA;t8 = DSCore.Object.Identity(t6);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="e812fd80-7443-4c19-a7d8-62187f6ba2ea" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search Criteria" x="-17929.0501403928" y="-8581.060306245" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;K4_EC15&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="88d52df2-da40-4299-932d-d26ab0b7f71e" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="PARAPET PANELS" x="-17295.7683916803" y="-8354.71500980204" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.Object.Identity@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="e7272be9-9c5c-4429-b14c-05ff01992b7e" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search By Family Type Name" x="-17793.1233798038" y="-8437.73486135913" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t1 = t2.Name;&#xA;t3 = String.Contains(t1, t4, false);&#xA;t5 = List.FilterByBoolMask(t2, t3);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);&#xA;t8 = DSCore.Object.Identity(t6);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="40258419-e1ac-47fc-a6b6-af702bd7eb6d" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search Criteria" x="-17927.0328048669" y="-8360.85808100781" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;K4_EC-P&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="97e17899-d78a-40a3-ad2a-e21e8ed61cb5" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Count" x="-17925.1886316343" y="-8205.71510729142" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="28096847-18cf-4688-98b2-ac9967c4fa51" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Count" x="-17920.7118853186" y="-8090.30277982923" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="45da810b-58d2-41f8-a483-a8832528ea71" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Count" x="-17921.2018934453" y="-7977.28561546508" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="23c08417-3741-4258-ae55-c70afe837ee2" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Count" x="-17920.5373114726" y="-7864.58698895195" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="6b9347b8-b22d-4f46-99ab-cbc8b0dad28f" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Count" x="-17919.9882283277" y="-7753.2885199503" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="4d221c6b-85d6-4e54-b5ff-8909579723f0" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Math.Sum" x="-17538.2814229043" y="-8003.33417198739" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DSCoreNodes.dll" function="DSCore.Math.Sum@double[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.CreateList guid="9db1601a-3c24-49cb-9f2b-7603176803ce" type="CoreNodeModels.CreateList" nickname="List.Create" x="-17683.5360277345" y="-8004.95179153151" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" inputcount="5">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+      <PortInfo index="3" default="False" />
+      <PortInfo index="4" default="False" />
+    </CoreNodeModels.CreateList>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="dacbe97a-ac38-4840-afb5-a11c03021902" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="13'-0&quot; PANELS" x="-14274.525416654" y="-10340.4142700293" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.Object.Identity@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="8bedef56-51d6-4f5f-b60e-9a624cb0c629" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="15'-0&quot; PANELS" x="-14274.5365494012" y="-9897.03994366687" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.Object.Identity@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="212442da-9f15-4a5d-b737-f13980ac7fca" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="14'-0&quot; PANELS" x="-14274.975535419" y="-10119.1080383808" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.Object.Identity@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="7908daff-45a1-4838-bc84-8a877f903eb2" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="10'-0&quot; PANELS" x="-14273.8286299006" y="-10560.6592053722" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.Object.Identity@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="2db61941-7e0c-496e-833a-68cbdf335f58" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search Criteria" x="-14892.6267108897" y="-10565.295508391" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;K4_EC10&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="ca6f3971-568f-40fa-b4ba-88f6b076a2bc" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search By Family Type Name" x="-14768.9050701217" y="-10642.1722887423" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t1 = t2.Name;&#xA;t3 = String.Contains(t1, t4, false);&#xA;t5 = List.FilterByBoolMask(t2, t3);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);&#xA;t8 = DSCore.Object.Identity(t6);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="ba416aa8-673c-4742-97b1-0acdb8caba50" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search By Family Type Name" x="-14772.9473792063" y="-10202.4241709934" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t1 = t2.Name;&#xA;t3 = String.Contains(t1, t4, false);&#xA;t5 = List.FilterByBoolMask(t2, t3);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);&#xA;t8 = DSCore.Object.Identity(t6);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="98b8455d-d44c-4a52-bcf9-044cf503e376" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search Criteria" x="-14906.8568042694" y="-10125.5473906421" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;K4_EC14&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="72e7b39c-a957-46b1-a641-637e27f948cd" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search By Family Type Name" x="-14770.9867492649" y="-10422.776335424" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t1 = t2.Name;&#xA;t3 = String.Contains(t1, t4, false);&#xA;t5 = List.FilterByBoolMask(t2, t3);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);&#xA;t8 = DSCore.Object.Identity(t6);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="8a2c92e8-a992-4224-80c9-56b54ab4fe7c" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search Criteria" x="-14904.896174328" y="-10345.8995550727" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;K4_EC13&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="70ce4826-e50c-468d-adfa-4d6d7c9adc9b" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search By Family Type Name" x="-14772.7910453011" y="-9980.48543755539" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t1 = t2.Name;&#xA;t3 = String.Contains(t1, t4, false);&#xA;t5 = List.FilterByBoolMask(t2, t3);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);&#xA;t8 = DSCore.Object.Identity(t6);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="3832e6c3-9c4d-4730-b901-4e0ad1236f5f" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search Criteria" x="-14906.7004703642" y="-9903.60865720407" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;K4_EC15&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="541bc4c1-88ed-45eb-9d34-7ce40f131610" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="PARAPET PANELS" x="-14273.4187216517" y="-9675.44233301327" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.Object.Identity@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="47a62da4-d88f-4dc3-a3b1-d8d72709a176" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search By Family Type Name" x="-14770.7737097752" y="-9758.46218457036" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t1 = t2.Name;&#xA;t3 = String.Contains(t1, t4, false);&#xA;t5 = List.FilterByBoolMask(t2, t3);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);&#xA;t8 = DSCore.Object.Identity(t6);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="58e42e35-02e8-4215-a493-0bf64ba662f1" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Search Criteria" x="-14904.6831348383" y="-9681.58540421904" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;K4_EC-P&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="16ea4c62-18d3-4c7d-b6e9-26034a6bde9f" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="-" x="-20326.942494433" y="-8846.44139408978" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="8986ece1-1165-444a-93b8-49f918649ae8" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="-" x="-20587.2872310928" y="-9868.85833882588" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="7394f921-8154-4e8f-baec-e063da646eb7" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Display.ByGeometryColor" x="-9301.72993346795" y="-10890.1038476348" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="Display.dll" function="Display.Display.ByGeometryColor@Autodesk.DesignScript.Geometry.Geometry,DSCore.Color">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="1efe7644-d61d-4a9f-a702-370f3f27342a" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Display.ByGeometryColor" x="-9594.26543919176" y="-10421.9533709716" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="Display.dll" function="Display.Display.ByGeometryColor@Autodesk.DesignScript.Geometry.Geometry,DSCore.Color">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="c91797b6-c15b-4666-84ae-e50a3b8ab780" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Element.Geometry" x="-9305.30689200311" y="-10758.673827364" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Element.Geometry">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="2e3ccbce-3801-4486-81e1-61d7b25027d4" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.FilterByBoolMask" x="-9989.19622750883" y="-10855.7650191428" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="400881b4-ba27-42ef-87c7-f0d8c5ecdc4b" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Element.Geometry" x="-9829.47004939047" y="-10368.0794232679" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Element.Geometry">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="1f52ae54-5a64-440e-9ef7-e87bf651f42e" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="==" x="-10166.3123017177" y="-10755.5106853395" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="Operators" function="==@var[]..[],var[]..[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.FromObject guid="d10729bc-a0ca-4eea-b440-1e87156def85" type="CoreNodeModels.FromObject" nickname="String from Object" x="-10313.4451070494" y="-10785.8701682571" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.FromObject>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="7337032a-6ed3-4a9d-8180-fb98811c630d" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-10351.6735704291" y="-10702.0458271834" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Curtain Panel&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="725ead37-2a24-4be3-8d35-9132d778dd2c" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.FilterByBoolMask" x="-10324.2367744322" y="-10480.2560700813" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="292607ea-5656-4171-808f-4b8a8afd292e" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Group.Members" x="-10631.747480135" y="-10809.3855217531" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <ID value="cc8fc720-915f-408d-9b91-b5589c0755d3" />
+      <Name value="Group.Members" />
+      <Description value="Retrieves the members of a group" />
+      <Inputs>
+        <Input value="group" />
+      </Inputs>
+      <Outputs>
+        <Output value="memberElements" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="00c0734f-f6f8-49a1-a8bb-ecdb5c631462" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="==" x="-10509.3028001841" y="-10418.5494534517" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="Operators" function="==@var[]..[],var[]..[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="6c842098-88fe-4591-be2f-8b13c84ad7de" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.GetItemAtIndex" x="-10827.5937798605" y="-10840.015407448" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.GetItemAtIndex@var[]..[],int">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.FromObject guid="6a2e2d9c-78f6-496d-8465-fd70876da2a7" type="CoreNodeModels.FromObject" nickname="String from Object" x="-10678.7827976837" y="-10444.8688159025" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.FromObject>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="0924939c-b688-4aa3-b9be-c61e4012281a" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-10679.8556307867" y="-10350.2143960872" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Curtain Panel&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="6555fe96-6e14-41c3-a870-8f24afe9255a" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Group.Members" x="-10969.7126762307" y="-10404.0125318155" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <ID value="cc8fc720-915f-408d-9b91-b5589c0755d3" />
+      <Name value="Group.Members" />
+      <Description value="Retrieves the members of a group" />
+      <Inputs>
+        <Input value="group" />
+      </Inputs>
+      <Outputs>
+        <Output value="memberElements" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <CoreNodeModels.Input.IntegerSlider guid="203a2560-9b0c-499a-b3b0-2f928926ee2a" type="CoreNodeModels.Input.IntegerSlider" nickname="Integer Slider" x="-11162.5079068432" y="-10815.861441816" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <System.Int32>0</System.Int32>
+      <Range min="0" max="4" step="1" />
+    </CoreNodeModels.Input.IntegerSlider>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="ffce0dc1-5021-432a-affe-dd93e7ee991a" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.RemoveItemAtIndex" x="-11159.0257318647" y="-10405.2356725743" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.RemoveItemAtIndex@var[]..[],int[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.CreateList guid="c6195d15-78ad-48a3-ace6-3c5a38b970ca" type="CoreNodeModels.CreateList" nickname="List.Create" x="-13982.3988169448" y="-10259.2116343754" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" inputcount="5">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+      <PortInfo index="3" default="False" />
+      <PortInfo index="4" default="False" />
+    </CoreNodeModels.CreateList>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="e3e6334a-026f-437c-a904-70c139db3fa7" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="-" x="-11639.6698247544" y="-10687.2840426624" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="x;" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="5cec720d-3754-46ea-a0f3-13d25063c400" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-9731.97942464825" y="-10901.3926984665" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t1 = 50;&#xA;t2 = 255;&#xA;t3 = 153;&#xA;t4 = 0;&#xA;color1 = DSCore.Color.ByARGB(t1, t2, t3, t4);" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="38cb90f5-60ca-4f43-949c-d3e527ac2236" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-10323.5352541149" y="-10372.4359185933" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t1 = 50;&#xA;t2 = 128;&#xA;t3 = 128;&#xA;t4 = 128;&#xA;color1 = DSCore.Color.ByARGB(t1, t2, t3, t4);" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="5e5fcb25-61a6-426f-b229-b8f1d24d1437" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Display.ByGeometryColor" x="-9545.36383895567" y="-11113.7306903239" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="Display.dll" function="Display.Display.ByGeometryColor@Autodesk.DesignScript.Geometry.Geometry,DSCore.Color">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="e5aa561b-6855-4a7b-b31e-5fca2f288b1f" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Element.Geometry" x="-9785.20799582647" y="-11196.9693197929" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Element.Geometry">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="3df4a341-f4e9-44ac-9fe5-af77e74fb3ac" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.FilterByBoolMask" x="-9975.54431866607" y="-11213.7683991988" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="1b13e894-2f9e-4572-8952-ca5e281b4336" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="==" x="-10162.6495273226" y="-11117.8535469632" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="Operators" function="==@var[]..[],var[]..[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.FromObject guid="c6595c54-397d-41de-ad9a-422de8cc19ba" type="CoreNodeModels.FromObject" nickname="String from Object" x="-10309.7823326543" y="-11148.2130298808" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.FromObject>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="ff7a5ed3-aeaf-429b-9340-eee3bab26482" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-10348.010796034" y="-11064.3886888071" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Curtain Panel&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="5a24b213-4fd7-4c1e-bb35-62b0a378d0f5" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Group.Members" x="-10607.2417939093" y="-11222.965004241" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <ID value="cc8fc720-915f-408d-9b91-b5589c0755d3" />
+      <Name value="Group.Members" />
+      <Description value="Retrieves the members of a group" />
+      <Inputs>
+        <Input value="group" />
+      </Inputs>
+      <Outputs>
+        <Output value="memberElements" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="829022db-7a2c-48d8-a506-3045760134e2" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.GetItemAtIndex" x="-10803.151514445" y="-11217.077101706" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.GetItemAtIndex@var[]..[],int">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Input.IntegerSlider guid="3b880753-295a-4f8b-8b70-a7e4f1764041" type="CoreNodeModels.Input.IntegerSlider" nickname="PANEL NUMBER" x="-11159.8225670218" y="-11117.7328205365" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <System.Int32>1</System.Int32>
+      <Range min="0" max="71" step="1" />
+    </CoreNodeModels.Input.IntegerSlider>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="95513f78-b551-4176-9cdb-025dfe9c7ff8" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-9963.44951308987" y="-11106.6798916785" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t1 = 255;&#xA;t2 = 255;&#xA;t3 = 153;&#xA;t4 = 0;&#xA;color1 = DSCore.Color.ByARGB(t1, t2, t3, t4);" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="d4b4dc86-0407-4e4d-b1fb-2b3d32f3ba81" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Count" x="-11343.5737773186" y="-11849.5876235045" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="69d68d00-a6f7-4930-abb2-1952e016bfe7" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Count" x="-11339.0970310029" y="-11734.1752960423" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="8b8b9732-08ef-4025-ba58-0f3d3ad196ad" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Count" x="-11339.5870391296" y="-11621.158131678" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="1e877834-8fd6-4b98-a47a-ac34d3ad1251" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Count" x="-11338.9224571569" y="-11508.4595051649" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="79ca3c5a-3b20-450e-b164-5e2c3e789607" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Count" x="-11338.373374012" y="-11397.1610361632" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="14d279de-a424-4b17-b3a2-80faece2b16b" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Math.Sum" x="-10956.6665685886" y="-11647.2066882003" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DSCoreNodes.dll" function="DSCore.Math.Sum@double[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.CreateList guid="30b3b5c4-91ec-4fce-99cb-b907f6c9369b" type="CoreNodeModels.CreateList" nickname="List.Create" x="-11101.9211734188" y="-11648.8243077444" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" inputcount="5">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+      <PortInfo index="3" default="False" />
+      <PortInfo index="4" default="False" />
+    </CoreNodeModels.CreateList>
+    <CoreNodeModels.CreateList guid="a1f43589-9950-4a3a-819d-061b1dac1665" type="CoreNodeModels.CreateList" nickname="List.Create" x="-16850.6232833338" y="-8936.95009569836" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" inputcount="5">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+      <PortInfo index="3" default="False" />
+      <PortInfo index="4" default="False" />
+    </CoreNodeModels.CreateList>
+    <DSRevitNodesUI.ElementTypes guid="ef6bc089-64d2-49c1-beca-fc801266af41" type="DSRevitNodesUI.ElementTypes" nickname="Element Types" x="-19826.7952341709" y="-9693.86197429119" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" index="325:View" />
+    <DSRevitNodesUI.ElementsOfType guid="992495c0-002d-4bb4-95ab-211aa0ccf6ce" type="DSRevitNodesUI.ElementsOfType" nickname="All Elements of Type" x="-19634.8331516909" y="-9694.34968898808" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </DSRevitNodesUI.ElementsOfType>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="fdf7b5f2-6ced-4660-9bda-ae348c88e193" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="View Name" x="-19622.7364252686" y="-9588.06797602713" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Cladding_Design&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="3793c251-b664-4b7b-95b1-5b86e8dc9903" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-19341.9061019305" y="-9687.73054322691" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t2 = t9;&#xA;t4 = t10;&#xA;t1 = t2.Name;&#xA;t3 = t1 == t4;&#xA;t5 = List.FilterByBoolMask(t2, t3);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);&#xA;t11 = List.GetItemAtIndex(t6, 0);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <CoreNodeModels.Watch guid="4d92cb4d-6f9f-41aa-a98b-571a9b816413" type="CoreNodeModels.Watch" nickname="Watch" x="-19271.8159921121" y="-9785.42546836275" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Watch>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="aab53ea6-69a7-4d06-9c14-27a7a8630f89" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-8397.8956323349" y="-7997.40252503858" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Type&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="c83c28e9-5c62-438f-830b-016ad0118854" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Element.SetParameterByName" x="-7745.7293946433" y="-7961.54060473082" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Element.SetParameterByName@string,var">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="0ba11ffc-c192-46da-bf43-e3e799deed25" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Springs.List.DropDown" x="-8389.5088002268" y="-7821.67395129153" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="true" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+      <PortInfo index="3" default="False" />
+      <ID value="a4a2f0a2-ccd6-4307-921d-241ffb37010f" />
+      <Name value="Springs.List.DropDown" />
+      <Description value="Selects one list item by a drop-down combo box. The optional names input will override the object representation." />
+      <Inputs>
+        <Input value="list" />
+        <Input value="names" />
+        <Input value="customMsg" />
+        <Input value="reset" />
+      </Inputs>
+      <Outputs>
+        <Output value="selection" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <CoreNodeModels.Input.BoolSelector guid="b49deca1-f14e-4976-a25c-8c1b55e1679b" type="CoreNodeModels.Input.BoolSelector" nickname="Run?" x="-8936.177577359" y="-8264.97783785804" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <System.Boolean>False</System.Boolean>
+    </CoreNodeModels.Input.BoolSelector>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="bfd9a694-8722-471c-a08d-6823a6bb3f15" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-9594.3844130355" y="-7541.12346469893" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Which wall type you want fam?&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="2844765c-d87d-40f1-8ba5-47b0fc66819c" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.GetItemAtIndex" x="-16466.1869964744" y="-8916.43217018929" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.GetItemAtIndex@var[]..[],int">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="76869c63-bda3-4ce0-83b2-8c4979817e38" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Available Panel Library" x="-16245.9001885157" y="-8815.54591417015" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.FamilyType.Name">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Watch guid="16b22447-5098-4e8b-a7c1-9db907e437a6" type="CoreNodeModels.Watch" nickname="Watch" x="-8043.8951632542" y="-7646.16422833722" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Watch>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="aeef075c-4d05-47e7-978d-a4f9aff7967d" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Group.Ungroup" x="-15368.3072379673" y="-9853.41951870257" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <ID value="cfe0d03d-c8ba-4cf7-9c4b-e5851d620ffb" />
+      <Name value="Group.Ungroup" />
+      <Description value="Ungroups a group and returns the ungrouped elements." />
+      <Inputs>
+        <Input value="group" />
+      </Inputs>
+      <Outputs>
+        <Output value="ungroupedElements" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="b91ed6c7-5f12-4c68-9b5b-6a9e30ec8c31" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Tool.RunMe" x="-8732.6215525169" y="-8220.24895243196" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="False" />
+      <ID value="cfbde2f4-d1eb-41f0-812b-c803944b126c" />
+      <Name value="Tool.RunMe" />
+      <Description value="Use Boolean to perform an action" />
+      <Inputs>
+        <Input value="Boolean" />
+        <Input value="ThingToDo" />
+      </Inputs>
+      <Outputs>
+        <Output value="Result" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <CoreNodeModels.Input.BoolSelector guid="2ddcc3f3-2f05-4967-8444-5aa95044b039" type="CoreNodeModels.Input.BoolSelector" nickname="Run?" x="-8619.9998633874" y="-7639.69402892524" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <System.Boolean>True</System.Boolean>
+    </CoreNodeModels.Input.BoolSelector>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="e1abbcf5-9f77-4258-b7ad-4b00012cc338" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="FamilyType.Name" x="-7725.5078806567" y="-8127.68215601178" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.FamilyType.Name">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="027334b5-a531-4643-82ed-eb87eec7d3ed" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Face.SurfaceGeometry" x="-8306.72583242467" y="-11874.0804517063" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Face.SurfaceGeometry">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="8dfcdf60-7e6f-41e7-8bc8-50c869c4ea83" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-8263.95931012149" y="-11778.874651463" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="0.5;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="02d451d9-3c20-400d-9191-71c8d973af4d" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Topology.Faces" x="-8905.79497985954" y="-11918.7762925385" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Topology.Faces">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="da9de9df-cb86-4a0c-ae87-a0a52be3782c" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="PANEL TAGS" x="-7902.44393556779" y="-12090.3668322895" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="C:\Users\Nick.Place\AppData\Roaming\Dynamo\Dynamo Revit\1.3\packages\Dynamo Text\bin\DynamoText.dll" function="DynamoText.Text.FromStringOriginAndScale@string,Autodesk.DesignScript.Geometry.Point,double">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="621d466c-ac0a-4427-9f4d-e6eb6181516f" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Surface.PointAtParameter" x="-8072.6273733222" y="-11871.0412122212" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Surface.PointAtParameter@double,double">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="e7f565ba-c3ab-4b1e-99bc-e7a0ced8cc56" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-8017.55738814606" y="-11991.4105873891" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="2;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="5f6bb335-c3d6-4252-ba2f-52e253662b67" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="UI.DropDown Data" x="-9141.90488230461" y="-7450.49429981589" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="true" isPinned="true">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+      <PortInfo index="3" default="True" />
+      <PortInfo index="4" default="True" />
+      <ID value="b409775c-5d88-4d47-96a3-5135c775d26a" />
+      <Name value="UI.DropDown Data" />
+      <Description value="Create data for DropDown input in UI.MultiInputForm ++ . Check out www.data-shapes.net for more infos." />
+      <Inputs>
+        <Input value="InputName" />
+        <Input value="Keys : []" />
+        <Input value="Values : []" />
+        <Input value="DefaultValueIndex" />
+        <Input value="Sorted_optional" />
+      </Inputs>
+      <Outputs>
+        <Output value="DropDown input" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <CoreNodeModels.Input.BoolSelector guid="df97cd6b-6353-4043-9c99-8642b90ab983" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="-9503.4079152913" y="-7200.0621218992" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Boolean>True</System.Boolean>
+    </CoreNodeModels.Input.BoolSelector>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="122d33f1-f33e-47d0-a8df-1f0dfd07b5ab" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-9447.7117845407" y="-7304.14035284648" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="0;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="7aba512d-4174-43b9-9c4f-581b67112f74" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.AllIndicesOf" x="-8404.9022506217" y="-8364.59825936992" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.AllIndicesOf@var[]..[],var">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="53c63dad-0b7b-4d2b-93f2-6e115e16dc5b" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Flatten" x="-8420.40937437922" y="-11604.7999794774" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="BuiltIn" function="Flatten@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.HigherOrder.Map guid="9ec016fa-18d2-4dbc-9324-bfd12bca2639" type="CoreNodeModels.HigherOrder.Map" nickname="List.Map" x="-8459.71401922336" y="-11877.3519312525" isVisible="false" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </CoreNodeModels.HigherOrder.Map>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="b480e1ff-ea26-4a74-a0da-3d1e6edc4369" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.GetItemAtIndex" x="-8665.40748622157" y="-11766.4323962449" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.GetItemAtIndex@var[]..[],int">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="04591300-8dac-4d4d-a090-18b2eb4681d5" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-8775.87748543721" y="-11742.0582110869" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="0;" ShouldFocus="false" />
+    <CoreNodeModels.HigherOrder.Map guid="caeafc49-c763-4f0a-abd9-d854d136f22a" type="CoreNodeModels.HigherOrder.Map" nickname="List.Map" x="-8069.45375109121" y="-12099.4123090302" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </CoreNodeModels.HigherOrder.Map>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="566e3dbb-3617-46b8-a01d-30cd28bbdb4a" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Panel Prefix" x="-8403.87267174172" y="-12017.0384458999" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;P - &quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction guid="6d89f420-f0b3-47bf-8b4a-22125c0d67bb" type="Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction" nickname="String.Concat" x="-8287.35313198672" y="-12020.6251477258" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.String.Concat@string[]" inputcount="2">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction>
+    <CoreNodeModels.FromObject guid="ebb9a0cf-3b47-4c46-b079-3721e68b8ec5" type="CoreNodeModels.FromObject" nickname="String from Object" x="-8228.53632900986" y="-12105.026136029" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.FromObject>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="be0a65ce-37de-47eb-89cf-f3db006091d6" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="List Enumeration" x="-8930.52244771998" y="-12099.9848408161" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t3 = List.Count(t4);&#xA;t5 = (1..t3..1);&#xA;t6 = {t5};&#xA;t7 = Manage.RemoveNulls(t6);&#xA;t8 = __TryGetValueFromNestedDictionaries(t7, &quot;Cleaned&quot;);&#xA;t9 = __TryGetValueFromNestedDictionaries(t7, &quot;Indices&quot;);&#xA;t10 = List.Flatten(t8, 1);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="08fe8afc-efc4-4489-baea-1c9bce0bce21" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="&quot;MASTER&quot; PANEL FILTER" x="-10121.6239135906" y="-10526.2812007152" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t2 = t3.Name;&#xA;t4 = String.Contains(t2, &quot;MASTER&quot;, false);&#xA;t5 = List.FilterByBoolMask(t3, t4);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="649b241c-f7df-4387-a7eb-f4f793f377fd" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="&quot;MASTER&quot; PANEL FILTER" x="-9811.90628346111" y="-10755.3395997213" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t2 = t3.Name;&#xA;t4 = String.Contains(t2, &quot;MASTER&quot;, false);&#xA;t5 = List.FilterByBoolMask(t3, t4);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="b46ef1c1-7ce5-4588-ae1e-dc6665b9907d" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Element.Geometry" x="-8203.76296599122" y="-11608.5080582622" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Element.Geometry">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="2fd84dae-1aac-485b-8be3-bf8bf724fdee" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Flatten" x="-8669.93889575181" y="-11900.0715551396" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.Flatten@var[]..[],int">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="3932fe5c-d814-4b4a-a115-e787319337ee" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-8782.30098292013" y="-11838.1951618742" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="1;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="b5d90b4e-835e-4164-b586-120759e7187d" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="&quot;ACCENT&quot; PANEL FILTER" x="-8924.45061026841" y="-11641.0587749572" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="t2 = t3.Name;&#xA;t4 = String.Contains(t2, &quot;ACCENT&quot;, false);&#xA;t5 = List.FilterByBoolMask(t3, t4);&#xA;t6 = __TryGetValueFromNestedDictionaries(t5, &quot;in&quot;);&#xA;t7 = __TryGetValueFromNestedDictionaries(t5, &quot;out&quot;);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="ecc0e896-db0b-4c36-9a76-15be55b89670" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-10851.9247123839" y="-11059.5027732431" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="X-1;" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="acd099cb-e410-414c-be5c-c53386979e67" start_index="0" end="4b3c2f92-3c46-4a88-b4cc-1aa5109c549c" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="4b3c2f92-3c46-4a88-b4cc-1aa5109c549c" start_index="0" end="da00240b-3f4c-4886-b885-a4f1b5658d3f" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="b4211481-5057-47e0-b34a-a41eda07a11f" start_index="0" end="3c2e1b21-ca91-47ef-bb7f-032460b25936" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3c2e1b21-ca91-47ef-bb7f-032460b25936" start_index="0" end="443ea2b5-76f5-4c4a-8604-9d49d7957d2e" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c2c2d81c-c684-428d-bf25-e0ecca6f4eba" start_index="0" end="ac76ae01-2738-4ae2-9a93-37afcccf4077" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="bd3ef51d-c468-4bd9-8154-f8c26906aca2" start_index="0" end="c2c2d81c-c684-428d-bf25-e0ecca6f4eba" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9ce6cefa-418d-4928-890f-3ab7fc6509de" start_index="0" end="965e896c-587e-4ca7-a7f8-87aaf9afcf22" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3d61f23c-0a97-4c9d-b509-513cd1f853bc" start_index="0" end="b8b49f98-0470-48dc-9375-a4052f00a2cd" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="b8b49f98-0470-48dc-9375-a4052f00a2cd" start_index="0" end="9dbb7ba9-a3a3-4a89-ad64-ae900fe311ab" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="b8b49f98-0470-48dc-9375-a4052f00a2cd" start_index="0" end="4f74f26e-b0a0-4529-970e-dee4b1cd51b1" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9dbb7ba9-a3a3-4a89-ad64-ae900fe311ab" start_index="0" end="6a542144-ede7-474c-bff3-f5923ea9fa9d" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="540aea8f-c4de-40aa-a9a0-2a6275998cdc" start_index="0" end="ac76ae01-2738-4ae2-9a93-37afcccf4077" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ac76ae01-2738-4ae2-9a93-37afcccf4077" start_index="0" end="9ce6cefa-418d-4928-890f-3ab7fc6509de" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ac76ae01-2738-4ae2-9a93-37afcccf4077" start_index="0" end="16d35715-37d5-475a-9932-d72571f57a02" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="f71349d9-6d90-4a54-baa8-032069beed86" start_index="0" end="9dbb7ba9-a3a3-4a89-ad64-ae900fe311ab" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6a542144-ede7-474c-bff3-f5923ea9fa9d" start_index="0" end="540aea8f-c4de-40aa-a9a0-2a6275998cdc" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="4f74f26e-b0a0-4529-970e-dee4b1cd51b1" start_index="0" end="48219434-e81a-4ada-a9e9-9d49839d7885" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9df27602-6710-46e4-8ee4-a3553b5af28e" start_index="0" end="4f74f26e-b0a0-4529-970e-dee4b1cd51b1" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="48219434-e81a-4ada-a9e9-9d49839d7885" start_index="0" end="540aea8f-c4de-40aa-a9a0-2a6275998cdc" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="965e896c-587e-4ca7-a7f8-87aaf9afcf22" start_index="0" end="16d35715-37d5-475a-9932-d72571f57a02" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="54623637-c5c8-4961-a674-64482df35093" start_index="0" end="965e896c-587e-4ca7-a7f8-87aaf9afcf22" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="16d35715-37d5-475a-9932-d72571f57a02" start_index="0" end="70ffc164-1992-4eaf-baab-0fb9d0f0b6e3" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="343b845e-65e5-4fa6-8f45-22a6b9839ebd" start_index="0" end="dc0e184e-8cc2-4c7c-a2ae-b996967f2217" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="dc0e184e-8cc2-4c7c-a2ae-b996967f2217" start_index="0" end="cba3f5b7-52fc-4354-ab09-6fdaf9b3113f" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="58a7b684-fcc2-4f88-b540-64e6c00a7655" start_index="0" end="dc0e184e-8cc2-4c7c-a2ae-b996967f2217" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="70ffc164-1992-4eaf-baab-0fb9d0f0b6e3" start_index="0" end="58a7b684-fcc2-4f88-b540-64e6c00a7655" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="70ffc164-1992-4eaf-baab-0fb9d0f0b6e3" start_index="0" end="cba3f5b7-52fc-4354-ab09-6fdaf9b3113f" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="cba3f5b7-52fc-4354-ab09-6fdaf9b3113f" start_index="0" end="aeef075c-4d05-47e7-978d-a4f9aff7967d" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="cba3f5b7-52fc-4354-ab09-6fdaf9b3113f" start_index="1" end="0c22ebab-be22-469d-9df7-7e60343b5d8c" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0c22ebab-be22-469d-9df7-7e60343b5d8c" start_index="0" end="ca6f3971-568f-40fa-b4ba-88f6b076a2bc" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0c22ebab-be22-469d-9df7-7e60343b5d8c" start_index="0" end="ba416aa8-673c-4742-97b1-0acdb8caba50" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0c22ebab-be22-469d-9df7-7e60343b5d8c" start_index="0" end="72e7b39c-a957-46b1-a641-637e27f948cd" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0c22ebab-be22-469d-9df7-7e60343b5d8c" start_index="0" end="70ce4826-e50c-468d-adfa-4d6d7c9adc9b" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0c22ebab-be22-469d-9df7-7e60343b5d8c" start_index="0" end="47a62da4-d88f-4dc3-a3b1-d8d72709a176" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0ab6539a-d975-474d-84d2-b7e3331ba891" start_index="0" end="9fa9fd12-5e0f-4d13-83ce-dec88b9ca9c5" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="40c39480-d22a-4ca5-8a1c-58fcf87f9903" start_index="0" end="0b1de430-ebec-490a-8b8d-11562a1632e0" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="40c39480-d22a-4ca5-8a1c-58fcf87f9903" start_index="0" end="31d5b912-12ff-4327-a96b-b17930a32c5e" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="40c39480-d22a-4ca5-8a1c-58fcf87f9903" start_index="0" end="b6c6780e-2f65-4a1f-8223-cb1f200df7a5" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="40c39480-d22a-4ca5-8a1c-58fcf87f9903" start_index="0" end="3d8ec7e4-3d49-4fce-9188-5507b0063a79" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="40c39480-d22a-4ca5-8a1c-58fcf87f9903" start_index="0" end="80cb1859-7bdc-43e8-ba34-678e6cb79600" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="40c39480-d22a-4ca5-8a1c-58fcf87f9903" start_index="0" end="e7272be9-9c5c-4429-b14c-05ff01992b7e" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6ab9825c-d73c-4ecb-993d-51a35e53ddc6" start_index="0" end="9fa9fd12-5e0f-4d13-83ce-dec88b9ca9c5" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a8770d32-0b96-47bd-95ee-9b74d7feaf96" start_index="0" end="0b1de430-ebec-490a-8b8d-11562a1632e0" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0b1de430-ebec-490a-8b8d-11562a1632e0" start_index="5" end="54703ff8-9ffa-426e-8a37-825f34fb0c96" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="da00240b-3f4c-4886-b885-a4f1b5658d3f" start_index="5" end="0ab6539a-d975-474d-84d2-b7e3331ba891" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="849ee31e-c1a7-4793-80a6-d47268b31fd5" start_index="0" end="da00240b-3f4c-4886-b885-a4f1b5658d3f" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9fa9fd12-5e0f-4d13-83ce-dec88b9ca9c5" start_index="4" end="40c39480-d22a-4ca5-8a1c-58fcf87f9903" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="54703ff8-9ffa-426e-8a37-825f34fb0c96" start_index="0" end="97e17899-d78a-40a3-ad2a-e21e8ed61cb5" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="54703ff8-9ffa-426e-8a37-825f34fb0c96" start_index="0" end="a1f43589-9950-4a3a-819d-061b1dac1665" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="31d5b912-12ff-4327-a96b-b17930a32c5e" start_index="0" end="99f42f68-fc7c-4ef1-85d5-a1bc91a60ecc" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="35202e4a-7373-4e41-9acf-4a10a41cc948" start_index="0" end="28096847-18cf-4688-98b2-ac9967c4fa51" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="35202e4a-7373-4e41-9acf-4a10a41cc948" start_index="0" end="a1f43589-9950-4a3a-819d-061b1dac1665" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="b6c6780e-2f65-4a1f-8223-cb1f200df7a5" start_index="5" end="35202e4a-7373-4e41-9acf-4a10a41cc948" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ec1da78c-b750-42dd-9b85-006cc1e552aa" start_index="0" end="b6c6780e-2f65-4a1f-8223-cb1f200df7a5" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7764f511-19e3-4681-8535-82edc84bc408" start_index="0" end="45da810b-58d2-41f8-a483-a8832528ea71" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7764f511-19e3-4681-8535-82edc84bc408" start_index="0" end="a1f43589-9950-4a3a-819d-061b1dac1665" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3d8ec7e4-3d49-4fce-9188-5507b0063a79" start_index="5" end="7764f511-19e3-4681-8535-82edc84bc408" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ef25f002-e98e-4436-bafc-a6d6a93b638f" start_index="0" end="3d8ec7e4-3d49-4fce-9188-5507b0063a79" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a302a51f-eada-4074-901e-fbd62f3b93ad" start_index="0" end="23c08417-3741-4258-ae55-c70afe837ee2" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a302a51f-eada-4074-901e-fbd62f3b93ad" start_index="0" end="a1f43589-9950-4a3a-819d-061b1dac1665" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="80cb1859-7bdc-43e8-ba34-678e6cb79600" start_index="5" end="a302a51f-eada-4074-901e-fbd62f3b93ad" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="e812fd80-7443-4c19-a7d8-62187f6ba2ea" start_index="0" end="80cb1859-7bdc-43e8-ba34-678e6cb79600" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="88d52df2-da40-4299-932d-d26ab0b7f71e" start_index="0" end="6b9347b8-b22d-4f46-99ab-cbc8b0dad28f" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="88d52df2-da40-4299-932d-d26ab0b7f71e" start_index="0" end="a1f43589-9950-4a3a-819d-061b1dac1665" end_index="4" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="e7272be9-9c5c-4429-b14c-05ff01992b7e" start_index="5" end="88d52df2-da40-4299-932d-d26ab0b7f71e" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="40258419-e1ac-47fc-a6b6-af702bd7eb6d" start_index="0" end="e7272be9-9c5c-4429-b14c-05ff01992b7e" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="97e17899-d78a-40a3-ad2a-e21e8ed61cb5" start_index="0" end="9db1601a-3c24-49cb-9f2b-7603176803ce" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="28096847-18cf-4688-98b2-ac9967c4fa51" start_index="0" end="9db1601a-3c24-49cb-9f2b-7603176803ce" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="45da810b-58d2-41f8-a483-a8832528ea71" start_index="0" end="9db1601a-3c24-49cb-9f2b-7603176803ce" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="23c08417-3741-4258-ae55-c70afe837ee2" start_index="0" end="9db1601a-3c24-49cb-9f2b-7603176803ce" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6b9347b8-b22d-4f46-99ab-cbc8b0dad28f" start_index="0" end="9db1601a-3c24-49cb-9f2b-7603176803ce" end_index="4" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9db1601a-3c24-49cb-9f2b-7603176803ce" start_index="0" end="4d221c6b-85d6-4e54-b5ff-8909579723f0" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="dacbe97a-ac38-4840-afb5-a11c03021902" start_index="0" end="69d68d00-a6f7-4930-abb2-1952e016bfe7" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="dacbe97a-ac38-4840-afb5-a11c03021902" start_index="0" end="c6195d15-78ad-48a3-ace6-3c5a38b970ca" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="8bedef56-51d6-4f5f-b60e-9a624cb0c629" start_index="0" end="c6195d15-78ad-48a3-ace6-3c5a38b970ca" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="8bedef56-51d6-4f5f-b60e-9a624cb0c629" start_index="0" end="1e877834-8fd6-4b98-a47a-ac34d3ad1251" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="212442da-9f15-4a5d-b737-f13980ac7fca" start_index="0" end="8b8b9732-08ef-4025-ba58-0f3d3ad196ad" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="212442da-9f15-4a5d-b737-f13980ac7fca" start_index="0" end="c6195d15-78ad-48a3-ace6-3c5a38b970ca" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7908daff-45a1-4838-bc84-8a877f903eb2" start_index="0" end="c6195d15-78ad-48a3-ace6-3c5a38b970ca" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7908daff-45a1-4838-bc84-8a877f903eb2" start_index="0" end="d4b4dc86-0407-4e4d-b1fb-2b3d32f3ba81" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2db61941-7e0c-496e-833a-68cbdf335f58" start_index="0" end="ca6f3971-568f-40fa-b4ba-88f6b076a2bc" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ca6f3971-568f-40fa-b4ba-88f6b076a2bc" start_index="5" end="7908daff-45a1-4838-bc84-8a877f903eb2" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ba416aa8-673c-4742-97b1-0acdb8caba50" start_index="5" end="212442da-9f15-4a5d-b737-f13980ac7fca" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="98b8455d-d44c-4a52-bcf9-044cf503e376" start_index="0" end="ba416aa8-673c-4742-97b1-0acdb8caba50" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="72e7b39c-a957-46b1-a641-637e27f948cd" start_index="5" end="dacbe97a-ac38-4840-afb5-a11c03021902" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="8a2c92e8-a992-4224-80c9-56b54ab4fe7c" start_index="0" end="72e7b39c-a957-46b1-a641-637e27f948cd" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="70ce4826-e50c-468d-adfa-4d6d7c9adc9b" start_index="5" end="8bedef56-51d6-4f5f-b60e-9a624cb0c629" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3832e6c3-9c4d-4730-b901-4e0ad1236f5f" start_index="0" end="70ce4826-e50c-468d-adfa-4d6d7c9adc9b" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="541bc4c1-88ed-45eb-9d34-7ce40f131610" start_index="0" end="c6195d15-78ad-48a3-ace6-3c5a38b970ca" end_index="4" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="541bc4c1-88ed-45eb-9d34-7ce40f131610" start_index="0" end="79ca3c5a-3b20-450e-b164-5e2c3e789607" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="47a62da4-d88f-4dc3-a3b1-d8d72709a176" start_index="5" end="541bc4c1-88ed-45eb-9d34-7ce40f131610" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="58e42e35-02e8-4215-a493-0bf64ba662f1" start_index="0" end="47a62da4-d88f-4dc3-a3b1-d8d72709a176" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c91797b6-c15b-4666-84ae-e50a3b8ab780" start_index="0" end="7394f921-8154-4e8f-baec-e063da646eb7" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2e3ccbce-3801-4486-81e1-61d7b25027d4" start_index="0" end="649b241c-f7df-4387-a7eb-f4f793f377fd" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="400881b4-ba27-42ef-87c7-f0d8c5ecdc4b" start_index="0" end="1efe7644-d61d-4a9f-a702-370f3f27342a" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="1f52ae54-5a64-440e-9ef7-e87bf651f42e" start_index="0" end="2e3ccbce-3801-4486-81e1-61d7b25027d4" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d10729bc-a0ca-4eea-b440-1e87156def85" start_index="0" end="1f52ae54-5a64-440e-9ef7-e87bf651f42e" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7337032a-6ed3-4a9d-8180-fb98811c630d" start_index="0" end="1f52ae54-5a64-440e-9ef7-e87bf651f42e" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="725ead37-2a24-4be3-8d35-9132d778dd2c" start_index="0" end="08fe8afc-efc4-4489-baea-1c9bce0bce21" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="292607ea-5656-4171-808f-4b8a8afd292e" start_index="0" end="2e3ccbce-3801-4486-81e1-61d7b25027d4" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="292607ea-5656-4171-808f-4b8a8afd292e" start_index="0" end="d10729bc-a0ca-4eea-b440-1e87156def85" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="00c0734f-f6f8-49a1-a8bb-ecdb5c631462" start_index="0" end="725ead37-2a24-4be3-8d35-9132d778dd2c" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6c842098-88fe-4591-be2f-8b13c84ad7de" start_index="0" end="292607ea-5656-4171-808f-4b8a8afd292e" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6c842098-88fe-4591-be2f-8b13c84ad7de" start_index="0" end="829022db-7a2c-48d8-a506-3045760134e2" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6c842098-88fe-4591-be2f-8b13c84ad7de" start_index="0" end="be0a65ce-37de-47eb-89cf-f3db006091d6" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6a2e2d9c-78f6-496d-8465-fd70876da2a7" start_index="0" end="00c0734f-f6f8-49a1-a8bb-ecdb5c631462" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0924939c-b688-4aa3-b9be-c61e4012281a" start_index="0" end="00c0734f-f6f8-49a1-a8bb-ecdb5c631462" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6555fe96-6e14-41c3-a870-8f24afe9255a" start_index="0" end="725ead37-2a24-4be3-8d35-9132d778dd2c" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6555fe96-6e14-41c3-a870-8f24afe9255a" start_index="0" end="6a2e2d9c-78f6-496d-8465-fd70876da2a7" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="203a2560-9b0c-499a-b3b0-2f928926ee2a" start_index="0" end="6c842098-88fe-4591-be2f-8b13c84ad7de" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="203a2560-9b0c-499a-b3b0-2f928926ee2a" start_index="0" end="ffce0dc1-5021-432a-affe-dd93e7ee991a" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="203a2560-9b0c-499a-b3b0-2f928926ee2a" start_index="0" end="2844765c-d87d-40f1-8ba5-47b0fc66819c" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ffce0dc1-5021-432a-affe-dd93e7ee991a" start_index="0" end="6555fe96-6e14-41c3-a870-8f24afe9255a" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c6195d15-78ad-48a3-ace6-3c5a38b970ca" start_index="0" end="6c842098-88fe-4591-be2f-8b13c84ad7de" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c6195d15-78ad-48a3-ace6-3c5a38b970ca" start_index="0" end="ffce0dc1-5021-432a-affe-dd93e7ee991a" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="5cec720d-3754-46ea-a0f3-13d25063c400" start_index="4" end="7394f921-8154-4e8f-baec-e063da646eb7" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="38cb90f5-60ca-4f43-949c-d3e527ac2236" start_index="4" end="1efe7644-d61d-4a9f-a702-370f3f27342a" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="e5aa561b-6855-4a7b-b31e-5fca2f288b1f" start_index="0" end="5e5fcb25-61a6-426f-b229-b8f1d24d1437" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3df4a341-f4e9-44ac-9fe5-af77e74fb3ac" start_index="0" end="e5aa561b-6855-4a7b-b31e-5fca2f288b1f" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="1b13e894-2f9e-4572-8952-ca5e281b4336" start_index="0" end="3df4a341-f4e9-44ac-9fe5-af77e74fb3ac" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c6595c54-397d-41de-ad9a-422de8cc19ba" start_index="0" end="1b13e894-2f9e-4572-8952-ca5e281b4336" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ff7a5ed3-aeaf-429b-9340-eee3bab26482" start_index="0" end="1b13e894-2f9e-4572-8952-ca5e281b4336" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="5a24b213-4fd7-4c1e-bb35-62b0a378d0f5" start_index="0" end="3df4a341-f4e9-44ac-9fe5-af77e74fb3ac" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="5a24b213-4fd7-4c1e-bb35-62b0a378d0f5" start_index="0" end="c6595c54-397d-41de-ad9a-422de8cc19ba" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="829022db-7a2c-48d8-a506-3045760134e2" start_index="0" end="5a24b213-4fd7-4c1e-bb35-62b0a378d0f5" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="829022db-7a2c-48d8-a506-3045760134e2" start_index="0" end="c83c28e9-5c62-438f-830b-016ad0118854" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="829022db-7a2c-48d8-a506-3045760134e2" start_index="0" end="e1abbcf5-9f77-4258-b7ad-4b00012cc338" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3b880753-295a-4f8b-8b70-a7e4f1764041" start_index="0" end="ecc0e896-db0b-4c36-9a76-15be55b89670" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="95513f78-b551-4176-9cdb-025dfe9c7ff8" start_index="4" end="5e5fcb25-61a6-426f-b229-b8f1d24d1437" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d4b4dc86-0407-4e4d-b1fb-2b3d32f3ba81" start_index="0" end="30b3b5c4-91ec-4fce-99cb-b907f6c9369b" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="69d68d00-a6f7-4930-abb2-1952e016bfe7" start_index="0" end="30b3b5c4-91ec-4fce-99cb-b907f6c9369b" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="8b8b9732-08ef-4025-ba58-0f3d3ad196ad" start_index="0" end="30b3b5c4-91ec-4fce-99cb-b907f6c9369b" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="1e877834-8fd6-4b98-a47a-ac34d3ad1251" start_index="0" end="30b3b5c4-91ec-4fce-99cb-b907f6c9369b" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="79ca3c5a-3b20-450e-b164-5e2c3e789607" start_index="0" end="30b3b5c4-91ec-4fce-99cb-b907f6c9369b" end_index="4" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="30b3b5c4-91ec-4fce-99cb-b907f6c9369b" start_index="0" end="14d279de-a424-4b17-b3a2-80faece2b16b" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a1f43589-9950-4a3a-819d-061b1dac1665" start_index="0" end="2844765c-d87d-40f1-8ba5-47b0fc66819c" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ef6bc089-64d2-49c1-beca-fc801266af41" start_index="0" end="992495c0-002d-4bb4-95ab-211aa0ccf6ce" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="992495c0-002d-4bb4-95ab-211aa0ccf6ce" start_index="0" end="3793c251-b664-4b7b-95b1-5b86e8dc9903" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="fdf7b5f2-6ced-4660-9bda-ae348c88e193" start_index="0" end="3793c251-b664-4b7b-95b1-5b86e8dc9903" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3793c251-b664-4b7b-95b1-5b86e8dc9903" start_index="7" end="4d92cb4d-6f9f-41aa-a98b-571a9b816413" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="4d92cb4d-6f9f-41aa-a98b-571a9b816413" start_index="0" end="c2c2d81c-c684-428d-bf25-e0ecca6f4eba" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="aab53ea6-69a7-4d06-9c14-27a7a8630f89" start_index="0" end="c83c28e9-5c62-438f-830b-016ad0118854" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0ba11ffc-c192-46da-bf43-e3e799deed25" start_index="0" end="c83c28e9-5c62-438f-830b-016ad0118854" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0ba11ffc-c192-46da-bf43-e3e799deed25" start_index="0" end="16b22447-5098-4e8b-a7c1-9db907e437a6" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="b49deca1-f14e-4976-a25c-8c1b55e1679b" start_index="0" end="b91ed6c7-5f12-4c68-9b5b-6a9e30ec8c31" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="bfd9a694-8722-471c-a08d-6823a6bb3f15" start_index="0" end="0ba11ffc-c192-46da-bf43-e3e799deed25" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="bfd9a694-8722-471c-a08d-6823a6bb3f15" start_index="0" end="5f6bb335-c3d6-4252-ba2f-52e253662b67" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2844765c-d87d-40f1-8ba5-47b0fc66819c" start_index="0" end="76869c63-bda3-4ce0-83b2-8c4979817e38" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2844765c-d87d-40f1-8ba5-47b0fc66819c" start_index="0" end="5f6bb335-c3d6-4252-ba2f-52e253662b67" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2844765c-d87d-40f1-8ba5-47b0fc66819c" start_index="0" end="0ba11ffc-c192-46da-bf43-e3e799deed25" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="76869c63-bda3-4ce0-83b2-8c4979817e38" start_index="0" end="0ba11ffc-c192-46da-bf43-e3e799deed25" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="76869c63-bda3-4ce0-83b2-8c4979817e38" start_index="0" end="b91ed6c7-5f12-4c68-9b5b-6a9e30ec8c31" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="76869c63-bda3-4ce0-83b2-8c4979817e38" start_index="0" end="5f6bb335-c3d6-4252-ba2f-52e253662b67" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2ddcc3f3-2f05-4967-8444-5aa95044b039" start_index="0" end="0ba11ffc-c192-46da-bf43-e3e799deed25" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="027334b5-a531-4643-82ed-eb87eec7d3ed" start_index="0" end="621d466c-ac0a-4427-9f4d-e6eb6181516f" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="8dfcdf60-7e6f-41e7-8bc8-50c869c4ea83" start_index="0" end="621d466c-ac0a-4427-9f4d-e6eb6181516f" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="8dfcdf60-7e6f-41e7-8bc8-50c869c4ea83" start_index="0" end="621d466c-ac0a-4427-9f4d-e6eb6181516f" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="02d451d9-3c20-400d-9191-71c8d973af4d" start_index="0" end="2fd84dae-1aac-485b-8be3-bf8bf724fdee" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="621d466c-ac0a-4427-9f4d-e6eb6181516f" start_index="0" end="da9de9df-cb86-4a0c-ae87-a0a52be3782c" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="e7f565ba-c3ab-4b1e-99bc-e7a0ced8cc56" start_index="0" end="da9de9df-cb86-4a0c-ae87-a0a52be3782c" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="df97cd6b-6353-4043-9c99-8642b90ab983" start_index="0" end="5f6bb335-c3d6-4252-ba2f-52e253662b67" end_index="4" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="122d33f1-f33e-47d0-a8df-1f0dfd07b5ab" start_index="0" end="5f6bb335-c3d6-4252-ba2f-52e253662b67" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="53c63dad-0b7b-4d2b-93f2-6e115e16dc5b" start_index="0" end="b46ef1c1-7ce5-4588-ae1e-dc6665b9907d" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9ec016fa-18d2-4dbc-9324-bfd12bca2639" start_index="0" end="027334b5-a531-4643-82ed-eb87eec7d3ed" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="b480e1ff-ea26-4a74-a0da-3d1e6edc4369" start_index="0" end="9ec016fa-18d2-4dbc-9324-bfd12bca2639" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="04591300-8dac-4d4d-a090-18b2eb4681d5" start_index="0" end="b480e1ff-ea26-4a74-a0da-3d1e6edc4369" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="caeafc49-c763-4f0a-abd9-d854d136f22a" start_index="0" end="da9de9df-cb86-4a0c-ae87-a0a52be3782c" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="566e3dbb-3617-46b8-a01d-30cd28bbdb4a" start_index="0" end="6d89f420-f0b3-47bf-8b4a-22125c0d67bb" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6d89f420-f0b3-47bf-8b4a-22125c0d67bb" start_index="0" end="caeafc49-c763-4f0a-abd9-d854d136f22a" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ebb9a0cf-3b47-4c46-b079-3721e68b8ec5" start_index="0" end="caeafc49-c763-4f0a-abd9-d854d136f22a" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="be0a65ce-37de-47eb-89cf-f3db006091d6" start_index="6" end="ebb9a0cf-3b47-4c46-b079-3721e68b8ec5" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="08fe8afc-efc4-4489-baea-1c9bce0bce21" start_index="3" end="400881b4-ba27-42ef-87c7-f0d8c5ecdc4b" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="649b241c-f7df-4387-a7eb-f4f793f377fd" start_index="3" end="c91797b6-c15b-4666-84ae-e50a3b8ab780" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="649b241c-f7df-4387-a7eb-f4f793f377fd" start_index="3" end="b5d90b4e-835e-4164-b586-120759e7187d" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="b46ef1c1-7ce5-4588-ae1e-dc6665b9907d" start_index="0" end="02d451d9-3c20-400d-9191-71c8d973af4d" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2fd84dae-1aac-485b-8be3-bf8bf724fdee" start_index="0" end="9ec016fa-18d2-4dbc-9324-bfd12bca2639" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3932fe5c-d814-4b4a-a115-e787319337ee" start_index="0" end="2fd84dae-1aac-485b-8be3-bf8bf724fdee" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="b5d90b4e-835e-4164-b586-120759e7187d" start_index="4" end="53c63dad-0b7b-4d2b-93f2-6e115e16dc5b" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ecc0e896-db0b-4c36-9a76-15be55b89670" start_index="0" end="829022db-7a2c-48d8-a506-3045760134e2" end_index="1" portType="0" />
+  </Connectors>
+  <Notes>
+    <Dynamo.Graph.Notes.NoteModel guid="11188065-f90c-4f98-ad71-4e2c13f5cef6" text="EC = Exterior Cladding" x="-16729.1064661373" y="-10126.736560969" />
+    <Dynamo.Graph.Notes.NoteModel guid="b26625b3-93ca-47f7-b73b-13a62990461b" text="CLADDING PANELS IN SELECTED BUILDING CONFIGURATION" x="-19815.508360524" y="-10275.1259366622" />
+    <Dynamo.Graph.Notes.NoteModel guid="d3def7d5-3878-4f85-8fdf-b743a1879aec" text="SUPER IMPORTANT!!!" x="-18641.7402964184" y="-10203.125495389" />
+  </Notes>
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="cab097bf-d957-4539-b4e5-7d261182dc7c" annotationText="SELECTS ALL ELEMENTS WITHIN THE BOUNDS OF THE BUILDING SCOPE BOX&#xD;&#xA;" left="-18653.0889127374" top="-10299.525495389" width="1914.2961808936" height="502.360416908758" fontSize="36" InitialTop="-10203.125495389" InitialHeight="420.996598614644" TextblockHeight="86.4" backgrouund="#FF71C6A8">
+      <Models ModelGuid="3d61f23c-0a97-4c9d-b509-513cd1f853bc" />
+      <Models ModelGuid="b8b49f98-0470-48dc-9375-a4052f00a2cd" />
+      <Models ModelGuid="321bc391-5ab2-4a7a-8ff8-41badd9bc334" />
+      <Models ModelGuid="9dbb7ba9-a3a3-4a89-ad64-ae900fe311ab" />
+      <Models ModelGuid="540aea8f-c4de-40aa-a9a0-2a6275998cdc" />
+      <Models ModelGuid="ac76ae01-2738-4ae2-9a93-37afcccf4077" />
+      <Models ModelGuid="f71349d9-6d90-4a54-baa8-032069beed86" />
+      <Models ModelGuid="6a542144-ede7-474c-bff3-f5923ea9fa9d" />
+      <Models ModelGuid="4f74f26e-b0a0-4529-970e-dee4b1cd51b1" />
+      <Models ModelGuid="9df27602-6710-46e4-8ee4-a3553b5af28e" />
+      <Models ModelGuid="48219434-e81a-4ada-a9e9-9d49839d7885" />
+      <Models ModelGuid="9ce6cefa-418d-4928-890f-3ab7fc6509de" />
+      <Models ModelGuid="d3def7d5-3878-4f85-8fdf-b743a1879aec" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="59b46b3b-032e-405d-8490-fbb3038b0bba" annotationText="SELECT ALL MODEL GROUPS IN ACTIVE VIEW" left="-19820.0268026593" top="-10172.1912155731" width="1167" height="269.000000000001" fontSize="36" InitialTop="-10118.9912155731" InitialHeight="253" TextblockHeight="43.2" backgrouund="#FFD4B6DB">
+      <Models ModelGuid="b4211481-5057-47e0-b34a-a41eda07a11f" />
+      <Models ModelGuid="3c2e1b21-ca91-47ef-bb7f-032460b25936" />
+      <Models ModelGuid="443ea2b5-76f5-4c4a-8604-9d49d7957d2e" />
+      <Models ModelGuid="c2c2d81c-c684-428d-bf25-e0ecca6f4eba" />
+      <Models ModelGuid="bd3ef51d-c468-4bd9-8154-f8c26906aca2" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="926155de-979f-4475-adbe-af1932958bcb" annotationText="FILTERING OUT LARGE FACE OF UNIT PANEL GROUPS" left="-15952.2129211221" top="-10299.1716283858" width="1036.5907185712" height="303.401174723401" fontSize="36" InitialTop="-10245.9716283858" InitialHeight="280.601174723448" TextblockHeight="43.2" backgrouund="#FFA4E1FF">
+      <Models ModelGuid="343b845e-65e5-4fa6-8f45-22a6b9839ebd" />
+      <Models ModelGuid="dc0e184e-8cc2-4c7c-a2ae-b996967f2217" />
+      <Models ModelGuid="58a7b684-fcc2-4f88-b540-64e6c00a7655" />
+      <Models ModelGuid="cba3f5b7-52fc-4354-ab09-6fdaf9b3113f" />
+      <Models ModelGuid="0c22ebab-be22-469d-9df7-7e60343b5d8c" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="22c3202a-eb77-4265-ad46-adacfef4f929" annotationText="FILTERING TO GET ALL EXTERIOR CLADDING WALL PANELS" left="-16739.1064661373" top="-10298.6629636605" width="787.977985108499" height="314.9757665061" fontSize="36" InitialTop="-10202.2629636605" InitialHeight="302.160249143868" TextblockHeight="86.4" backgrouund="#FFE8F7AD">
+      <Models ModelGuid="965e896c-587e-4ca7-a7f8-87aaf9afcf22" />
+      <Models ModelGuid="54623637-c5c8-4961-a674-64482df35093" />
+      <Models ModelGuid="16d35715-37d5-475a-9932-d72571f57a02" />
+      <Models ModelGuid="70ffc164-1992-4eaf-baab-0fb9d0f0b6e3" />
+      <Models ModelGuid="11188065-f90c-4f98-ad71-4e2c13f5cef6" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="8de406ec-084b-4760-85de-3e94afa56a5d" annotationText="SELECT ALL INDIVIDUAL EXTERIOR CLADDING PANELS" left="-19820.1444764738" top="-9163.34456051147" width="1794.0943964565" height="221.86788988873" fontSize="30" InitialTop="-9117.34456051147" InitialHeight="427.719630678177" TextblockHeight="36" backgrouund="#FFBB87C6">
+      <Models ModelGuid="acd099cb-e410-414c-be5c-c53386979e67" />
+      <Models ModelGuid="4b3c2f92-3c46-4a88-b4cc-1aa5109c549c" />
+      <Models ModelGuid="0ab6539a-d975-474d-84d2-b7e3331ba891" />
+      <Models ModelGuid="40c39480-d22a-4ca5-8a1c-58fcf87f9903" />
+      <Models ModelGuid="6ab9825c-d73c-4ecb-993d-51a35e53ddc6" />
+      <Models ModelGuid="849ee31e-c1a7-4793-80a6-d47268b31fd5" />
+      <Models ModelGuid="da00240b-3f4c-4886-b885-a4f1b5658d3f" />
+      <Models ModelGuid="9fa9fd12-5e0f-4d13-83ce-dec88b9ca9c5" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="04441f52-afb2-45a7-981c-69eb4cd62807" annotationText="COUNT VALIDATION" left="-17935.1886316343" top="-8251.71510729142" width="590.107208730001" height="591.02658734112" fontSize="30" InitialTop="-8205.71510729142" InitialHeight="575.426587341115" TextblockHeight="36" backgrouund="#FFA4E1FF">
+      <Models ModelGuid="97e17899-d78a-40a3-ad2a-e21e8ed61cb5" />
+      <Models ModelGuid="28096847-18cf-4688-98b2-ac9967c4fa51" />
+      <Models ModelGuid="45da810b-58d2-41f8-a483-a8832528ea71" />
+      <Models ModelGuid="23c08417-3741-4258-ae55-c70afe837ee2" />
+      <Models ModelGuid="6b9347b8-b22d-4f46-99ab-cbc8b0dad28f" />
+      <Models ModelGuid="4d221c6b-85d6-4e54-b5ff-8909579723f0" />
+      <Models ModelGuid="9db1601a-3c24-49cb-9f2b-7603176803ce" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="d86fbf6b-8c6f-4c45-8c1a-9ef350e5421b" annotationText="10'-0&quot; PANELS" left="-17935.4334822316" top="-9366.99789890599" width="819.598080989098" height="220.113083370121" fontSize="30" InitialTop="-9320.99789890599" InitialHeight="204.513083370115" TextblockHeight="36" backgrouund="#FFFFAA45">
+      <Models ModelGuid="a8770d32-0b96-47bd-95ee-9b74d7feaf96" />
+      <Models ModelGuid="0b1de430-ebec-490a-8b8d-11562a1632e0" />
+      <Models ModelGuid="54703ff8-9ffa-426e-8a37-825f34fb0c96" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="ed80b93d-5762-431a-b102-16f00bffbd22" annotationText="14'-0&quot;PANELS" left="-17933.5254583715" top="-8923.11110824151" width="832.6812688504" height="221.91613261259" fontSize="30" InitialTop="-8877.11110824151" InitialHeight="206.316132612592" TextblockHeight="36" backgrouund="#FFFFAA45">
+      <Models ModelGuid="35202e4a-7373-4e41-9acf-4a10a41cc948" />
+      <Models ModelGuid="b6c6780e-2f65-4a1f-8223-cb1f200df7a5" />
+      <Models ModelGuid="ec1da78c-b750-42dd-9b85-006cc1e552aa" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="185f6c15-8921-403a-96f0-8d3e7c63373e" annotationText="13'-0&quot; PANELS" left="-17931.5648284301" top="-9148.45020053967" width="831.1707576741" height="220.9620653947" fontSize="30" InitialTop="-9102.45020053967" InitialHeight="205.3620653947" TextblockHeight="36" backgrouund="#FFFFAA45">
+      <Models ModelGuid="7764f511-19e3-4681-8535-82edc84bc408" />
+      <Models ModelGuid="3d8ec7e4-3d49-4fce-9188-5507b0063a79" />
+      <Models ModelGuid="ef25f002-e98e-4436-bafc-a6d6a93b638f" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="cd22b355-4b28-406e-a909-bd809834a77a" annotationText="15'-0&quot; PANELS" left="-17939.0501403928" top="-8703.93708659632" width="832.963920963001" height="222.045493888521" fontSize="30" InitialTop="-8657.93708659632" InitialHeight="206.44549388852" TextblockHeight="36" backgrouund="#FFFFAA45">
+      <Models ModelGuid="a302a51f-eada-4074-901e-fbd62f3b93ad" />
+      <Models ModelGuid="80cb1859-7bdc-43e8-ba34-678e6cb79600" />
+      <Models ModelGuid="e812fd80-7443-4c19-a7d8-62187f6ba2ea" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="a50a28d7-258e-47ba-a5f3-7b8826d5bbba" annotationText="PARAPET PANELS" left="-17937.0328048669" top="-8483.73486135913" width="832.0644131866" height="221.61985155709" fontSize="30" InitialTop="-8437.73486135913" InitialHeight="206.01985155709" TextblockHeight="36" backgrouund="#FFFFAA45">
+      <Models ModelGuid="88d52df2-da40-4299-932d-d26ab0b7f71e" />
+      <Models ModelGuid="e7272be9-9c5c-4429-b14c-05ff01992b7e" />
+      <Models ModelGuid="40258419-e1ac-47fc-a6b6-af702bd7eb6d" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="04256abe-ea77-4179-93fd-f468fe298f0d" annotationText="13'-0&quot; PANELS" left="-14914.896174328" top="-10468.776335424" width="831.170757674" height="220.9620653947" fontSize="30" InitialTop="-10422.776335424" InitialHeight="205.3620653947" TextblockHeight="36" backgrouund="#FFFFAA45">
+      <Models ModelGuid="dacbe97a-ac38-4840-afb5-a11c03021902" />
+      <Models ModelGuid="72e7b39c-a957-46b1-a641-637e27f948cd" />
+      <Models ModelGuid="8a2c92e8-a992-4224-80c9-56b54ab4fe7c" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="23431070-bf79-4197-8feb-9063ca3ec2b9" annotationText="15'-0&quot; PANELS" left="-14916.7004703642" top="-10026.4854375554" width="832.963920963001" height="222.045493888519" fontSize="30" InitialTop="-9980.48543755539" InitialHeight="206.44549388852" TextblockHeight="36" backgrouund="#FFFFAA45">
+      <Models ModelGuid="8bedef56-51d6-4f5f-b60e-9a624cb0c629" />
+      <Models ModelGuid="70ce4826-e50c-468d-adfa-4d6d7c9adc9b" />
+      <Models ModelGuid="3832e6c3-9c4d-4730-b901-4e0ad1236f5f" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="cad2fdef-e676-463f-93c5-d9aa42100935" annotationText="PARAPET PANELS" left="-14914.6831348383" top="-9804.46218457036" width="832.0644131866" height="221.61985155709" fontSize="30" InitialTop="-9758.46218457036" InitialHeight="206.01985155709" TextblockHeight="36" backgrouund="#FFFFAA45">
+      <Models ModelGuid="541bc4c1-88ed-45eb-9d34-7ce40f131610" />
+      <Models ModelGuid="47a62da4-d88f-4dc3-a3b1-d8d72709a176" />
+      <Models ModelGuid="58e42e35-02e8-4215-a493-0bf64ba662f1" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="e13c37a8-9b3b-442d-8973-6369ec6b76a3" annotationText="14'-0&quot;PANELS" left="-14916.8568042694" top="-10248.4241709934" width="832.681268850399" height="221.916132612601" fontSize="30" InitialTop="-10202.4241709934" InitialHeight="206.31613261259" TextblockHeight="36" backgrouund="#FFFFAA45">
+      <Models ModelGuid="212442da-9f15-4a5d-b737-f13980ac7fca" />
+      <Models ModelGuid="ba416aa8-673c-4742-97b1-0acdb8caba50" />
+      <Models ModelGuid="98b8455d-d44c-4a52-bcf9-044cf503e376" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="fb518ed3-3443-4c7c-b14c-a14a13d92005" annotationText="10'-0&quot; PANELS" left="-14902.6267108897" top="-10688.1722887423" width="819.5980809891" height="220.113083370099" fontSize="30" InitialTop="-10642.1722887423" InitialHeight="204.51308337011" TextblockHeight="36" backgrouund="#FFFFAA45">
+      <Models ModelGuid="2db61941-7e0c-496e-833a-68cbdf335f58" />
+      <Models ModelGuid="ca6f3971-568f-40fa-b4ba-88f6b076a2bc" />
+      <Models ModelGuid="7908daff-45a1-4838-bc84-8a877f903eb2" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="2d48b33e-a2a0-47df-9915-4bb9ba4b7a67" annotationText="LIBRARY OF CLADDING PANELS" left="-20336.942494433" top="-9317.24139408978" width="477.206666666667" height="563.399999999999" fontSize="96" InitialTop="-8846.44139408978" InitialHeight="123" TextblockHeight="460.8" backgrouund="#FFC1D676">
+      <Models ModelGuid="16ea4c62-18d3-4c7d-b6e9-26034a6bde9f" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="619119d3-6f14-464c-b312-d753f0d8b24b" annotationText="CLADDING PANELS IN SELECTED BUILDING CONFIGURATION" left="-20597.2872310928" top="-10454.8583388259" width="747.763333333333" height="678.6" fontSize="96" InitialTop="-9868.85833882588" InitialHeight="123" TextblockHeight="576" backgrouund="#FFC1D676">
+      <Models ModelGuid="8986ece1-1165-444a-93b8-49f918649ae8" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="1af1d038-f374-4058-a03f-67ec0e046c36" annotationText="TRANSIENT PANELS&#xD;&#xA;" left="-11169.0257318647" top="-10608.2812007152" width="1805.56029267293" height="390.845282121938" fontSize="30" InitialTop="-10526.2812007152" InitialHeight="376.9005912708" TextblockHeight="72" backgrouund="#FF71C6A8">
+      <Models ModelGuid="6555fe96-6e14-41c3-a870-8f24afe9255a" />
+      <Models ModelGuid="00c0734f-f6f8-49a1-a8bb-ecdb5c631462" />
+      <Models ModelGuid="725ead37-2a24-4be3-8d35-9132d778dd2c" />
+      <Models ModelGuid="6a2e2d9c-78f6-496d-8465-fd70876da2a7" />
+      <Models ModelGuid="0924939c-b688-4aa3-b9be-c61e4012281a" />
+      <Models ModelGuid="1efe7644-d61d-4a9f-a702-370f3f27342a" />
+      <Models ModelGuid="400881b4-ba27-42ef-87c7-f0d8c5ecdc4b" />
+      <Models ModelGuid="ffce0dc1-5021-432a-affe-dd93e7ee991a" />
+      <Models ModelGuid="38cb90f5-60ca-4f43-949c-d3e527ac2236" />
+      <Models ModelGuid="08fe8afc-efc4-4489-baea-1c9bce0bce21" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="4df34c51-5f5d-4838-92ec-daae82d6ac53" annotationText="CLADDING PANELS GROUP SELECTION PREVIEW" left="-11649.6698247544" top="-11273.2840426624" width="482.78" height="678.6" fontSize="96" InitialTop="-10687.2840426624" InitialHeight="123" TextblockHeight="576" backgrouund="#FFC1D676">
+      <Models ModelGuid="e3e6334a-026f-437c-a904-70c139db3fa7" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="0632d502-6e26-4b41-87b7-0f101ee3afdc" annotationText="INDIVIDUAL PANEL DISPLAY" left="-11169.8225670218" top="-11268.965004241" width="1855.25872806614" height="317.285112562498" fontSize="30" InitialTop="-11222.965004241" InitialHeight="297.3972100275" TextblockHeight="36" backgrouund="#FFC1D676">
+      <Models ModelGuid="5e5fcb25-61a6-426f-b229-b8f1d24d1437" />
+      <Models ModelGuid="e5aa561b-6855-4a7b-b31e-5fca2f288b1f" />
+      <Models ModelGuid="3df4a341-f4e9-44ac-9fe5-af77e74fb3ac" />
+      <Models ModelGuid="1b13e894-2f9e-4572-8952-ca5e281b4336" />
+      <Models ModelGuid="c6595c54-397d-41de-ad9a-422de8cc19ba" />
+      <Models ModelGuid="ff7a5ed3-aeaf-429b-9340-eee3bab26482" />
+      <Models ModelGuid="5a24b213-4fd7-4c1e-bb35-62b0a378d0f5" />
+      <Models ModelGuid="829022db-7a2c-48d8-a506-3045760134e2" />
+      <Models ModelGuid="3b880753-295a-4f8b-8b70-a7e4f1764041" />
+      <Models ModelGuid="95513f78-b551-4176-9cdb-025dfe9c7ff8" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="b2c46738-71b9-4446-8d3e-f6801b97cfe4" annotationText="COUNT VALIDATION" left="-11353.5737773186" top="-11895.5876235045" width="590.107208730001" height="591.026587341301" fontSize="30" InitialTop="-11849.5876235045" InitialHeight="575.42658734112" TextblockHeight="36" backgrouund="#FFA4E1FF">
+      <Models ModelGuid="d4b4dc86-0407-4e4d-b1fb-2b3d32f3ba81" />
+      <Models ModelGuid="69d68d00-a6f7-4930-abb2-1952e016bfe7" />
+      <Models ModelGuid="8b8b9732-08ef-4025-ba58-0f3d3ad196ad" />
+      <Models ModelGuid="1e877834-8fd6-4b98-a47a-ac34d3ad1251" />
+      <Models ModelGuid="79ca3c5a-3b20-450e-b164-5e2c3e789607" />
+      <Models ModelGuid="14d279de-a424-4b17-b3a2-80faece2b16b" />
+      <Models ModelGuid="30b3b5c4-91ec-4fce-99cb-b907f6c9369b" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="a94d9a1d-2677-4f48-9c15-d2eac178a4b8" annotationText="SELECT SPECIFIC VIEW" left="-19836.7952341709" top="-9831.42546836275" width="995.289132240401" height="351.494925135839" fontSize="30" InitialTop="-9785.42546836275" InitialHeight="335.49492513583" TextblockHeight="36" backgrouund="#FF48B9FF">
+      <Models ModelGuid="ef6bc089-64d2-49c1-beca-fc801266af41" />
+      <Models ModelGuid="992495c0-002d-4bb4-95ab-211aa0ccf6ce" />
+      <Models ModelGuid="fdf7b5f2-6ced-4660-9bda-ae348c88e193" />
+      <Models ModelGuid="3793c251-b664-4b7b-95b1-5b86e8dc9903" />
+      <Models ModelGuid="4d92cb4d-6f9f-41aa-a98b-571a9b816413" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="35816b3e-0216-4a33-b9c5-bf326e3acdb5" annotationText="Preview Panel Labels" left="-8940.52244771998" top="-12151.026136029" width="1245.67851215219" height="664.967361071809" fontSize="30" InitialTop="-12105.026136029" InitialHeight="485.567924942011" TextblockHeight="36" backgrouund="#FFC1D676">
+      <Models ModelGuid="027334b5-a531-4643-82ed-eb87eec7d3ed" />
+      <Models ModelGuid="8dfcdf60-7e6f-41e7-8bc8-50c869c4ea83" />
+      <Models ModelGuid="02d451d9-3c20-400d-9191-71c8d973af4d" />
+      <Models ModelGuid="da9de9df-cb86-4a0c-ae87-a0a52be3782c" />
+      <Models ModelGuid="621d466c-ac0a-4427-9f4d-e6eb6181516f" />
+      <Models ModelGuid="e7f565ba-c3ab-4b1e-99bc-e7a0ced8cc56" />
+      <Models ModelGuid="9ec016fa-18d2-4dbc-9324-bfd12bca2639" />
+      <Models ModelGuid="b480e1ff-ea26-4a74-a0da-3d1e6edc4369" />
+      <Models ModelGuid="04591300-8dac-4d4d-a090-18b2eb4681d5" />
+      <Models ModelGuid="caeafc49-c763-4f0a-abd9-d854d136f22a" />
+      <Models ModelGuid="566e3dbb-3617-46b8-a01d-30cd28bbdb4a" />
+      <Models ModelGuid="6d89f420-f0b3-47bf-8b4a-22125c0d67bb" />
+      <Models ModelGuid="ebb9a0cf-3b47-4c46-b079-3721e68b8ec5" />
+      <Models ModelGuid="be0a65ce-37de-47eb-89cf-f3db006091d6" />
+      <Models ModelGuid="2fd84dae-1aac-485b-8be3-bf8bf724fdee" />
+      <Models ModelGuid="3932fe5c-d814-4b4a-a115-e787319337ee" />
+      <Models ModelGuid="b46ef1c1-7ce5-4588-ae1e-dc6665b9907d" />
+      <Models ModelGuid="53c63dad-0b7b-4d2b-93f2-6e115e16dc5b" />
+      <Models ModelGuid="b5d90b4e-835e-4164-b586-120759e7187d" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="ee81a269-bff0-4230-8e4e-4db7857831b1" annotationText="PANEL GROUP DISPLAY" left="-11172.5079068432" top="-10947.3926984665" width="2101.57797337526" height="337.946871283165" fontSize="30" InitialTop="-10901.3926984665" InitialHeight="321.946871283165" TextblockHeight="36" backgrouund="#FFC1D676">
+      <Models ModelGuid="7394f921-8154-4e8f-baec-e063da646eb7" />
+      <Models ModelGuid="c91797b6-c15b-4666-84ae-e50a3b8ab780" />
+      <Models ModelGuid="2e3ccbce-3801-4486-81e1-61d7b25027d4" />
+      <Models ModelGuid="1f52ae54-5a64-440e-9ef7-e87bf651f42e" />
+      <Models ModelGuid="d10729bc-a0ca-4eea-b440-1e87156def85" />
+      <Models ModelGuid="7337032a-6ed3-4a9d-8180-fb98811c630d" />
+      <Models ModelGuid="292607ea-5656-4171-808f-4b8a8afd292e" />
+      <Models ModelGuid="6c842098-88fe-4591-be2f-8b13c84ad7de" />
+      <Models ModelGuid="203a2560-9b0c-499a-b3b0-2f928926ee2a" />
+      <Models ModelGuid="5cec720d-3754-46ea-a0f3-13d25063c400" />
+      <Models ModelGuid="649b241c-f7df-4387-a7eb-f4f793f377fd" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="8dd833cf-ebc1-4616-ad8c-1be59f4e7ca7" annotationText="GROUP SWAP" left="-9604.3844130355" top="-8489.79825936993" width="2137.4550183922" height="1357.53613747072" fontSize="96" InitialTop="-8364.59825936992" InitialHeight="1262.33613747072" TextblockHeight="115.2" backgrouund="#FFC1D676">
+      <Models ModelGuid="aab53ea6-69a7-4d06-9c14-27a7a8630f89" />
+      <Models ModelGuid="c83c28e9-5c62-438f-830b-016ad0118854" />
+      <Models ModelGuid="0ba11ffc-c192-46da-bf43-e3e799deed25" />
+      <Models ModelGuid="b49deca1-f14e-4976-a25c-8c1b55e1679b" />
+      <Models ModelGuid="bfd9a694-8722-471c-a08d-6823a6bb3f15" />
+      <Models ModelGuid="16b22447-5098-4e8b-a7c1-9db907e437a6" />
+      <Models ModelGuid="b91ed6c7-5f12-4c68-9b5b-6a9e30ec8c31" />
+      <Models ModelGuid="2ddcc3f3-2f05-4967-8444-5aa95044b039" />
+      <Models ModelGuid="e1abbcf5-9f77-4258-b7ad-4b00012cc338" />
+      <Models ModelGuid="5f6bb335-c3d6-4252-ba2f-52e253662b67" />
+      <Models ModelGuid="df97cd6b-6353-4043-9c99-8642b90ab983" />
+      <Models ModelGuid="122d33f1-f33e-47d0-a8df-1f0dfd07b5ab" />
+      <Models ModelGuid="7aba512d-4174-43b9-9c4f-581b67112f74" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="148.520691588565" eyeY="96.3516528789247" eyeZ="112.010036345451" lookX="-61.3214551174603" lookY="-101.244376007001" lookZ="-84.679189144005" upX="-0.308201071705095" upY="0.850811194172381" upZ="-0.425596782989123" />
+  </Cameras>
+</Workspace>
