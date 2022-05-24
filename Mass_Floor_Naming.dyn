@@ -433,11 +433,11 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
-      "Code": "x == a || a == b || a ==c || a == d;",
+      "Code": "x == a || x == b || x ==c || x == d;",
       "Id": "48180748af3e445bb08dcefb418dff0a",
       "Inputs": [
         {
-          "Id": "e5975391a89a4d21ab78f5a21ae9d0f0",
+          "Id": "ce05bcf67d644b54a36dc6f64c8a4149",
           "Name": "x",
           "Description": "x",
           "UsingDefaultValue": false,
@@ -446,7 +446,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "f63a6bd7ab114ee692d9617ca32e8784",
+          "Id": "8896be670d804227b8ce0aa02564e0a1",
           "Name": "a",
           "Description": "a",
           "UsingDefaultValue": false,
@@ -455,7 +455,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "42f9480f706d457d977f59a03da2e837",
+          "Id": "dfe4ee5aba5d4ed5b4ac22dca6d01037",
           "Name": "b",
           "Description": "b",
           "UsingDefaultValue": false,
@@ -464,7 +464,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "12df6533a4e341bda8416ef29b057373",
+          "Id": "66931c650eb942449204cda884cd4204",
           "Name": "c",
           "Description": "c",
           "UsingDefaultValue": false,
@@ -473,7 +473,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "a17a70a97fc24f739a0f0bc06966e911",
+          "Id": "b311f84882334f7dab7129854594cc35",
           "Name": "d",
           "Description": "d",
           "UsingDefaultValue": false,
@@ -484,7 +484,7 @@
       ],
       "Outputs": [
         {
-          "Id": "570c28a27ce14386b45c0b27bb530198",
+          "Id": "0d6c4fb4eebc4010b6fddac8d466139e",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -750,26 +750,26 @@
     },
     {
       "Start": "ba93950c33434b9eafdee595d84e63fc",
-      "End": "f63a6bd7ab114ee692d9617ca32e8784",
-      "Id": "b91cb86bf6e9466fbe18fbca0d15e6fb",
+      "End": "8896be670d804227b8ce0aa02564e0a1",
+      "Id": "ddb5f151326b40779587c0b9d0339cce",
       "IsHidden": "False"
     },
     {
       "Start": "25a4f0e8921546a6b6089af787182fd1",
-      "End": "42f9480f706d457d977f59a03da2e837",
-      "Id": "f8099143d7da466a8a44e1996dba2b55",
+      "End": "dfe4ee5aba5d4ed5b4ac22dca6d01037",
+      "Id": "afa361115e424627b85f5db296045c28",
       "IsHidden": "False"
     },
     {
       "Start": "937d4674f42749eb8f64fab3365121f8",
-      "End": "12df6533a4e341bda8416ef29b057373",
-      "Id": "6d63f51d2ccf44128df45df307c06ec7",
+      "End": "66931c650eb942449204cda884cd4204",
+      "Id": "09a7cf416ab847faa8cfb65e44ca0649",
       "IsHidden": "False"
     },
     {
       "Start": "c6a3cffcfec14140a1379399dbf530c3",
-      "End": "a17a70a97fc24f739a0f0bc06966e911",
-      "Id": "3cd0a899a4c247d889f7b82548bfc95e",
+      "End": "b311f84882334f7dab7129854594cc35",
+      "Id": "487057a76b8c466d8fda3f88724348f9",
       "IsHidden": "False"
     },
     {
@@ -798,12 +798,6 @@
     },
     {
       "Start": "87aed933336544ea9633422c14360da0",
-      "End": "e5975391a89a4d21ab78f5a21ae9d0f0",
-      "Id": "0e158b5cf02e49d7af05811e83a1d209",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "87aed933336544ea9633422c14360da0",
       "End": "999f412fbb504f1a869a712a0a4f265c",
       "Id": "cf510673b4624ad58175a463f737b320",
       "IsHidden": "False"
@@ -815,9 +809,15 @@
       "IsHidden": "False"
     },
     {
-      "Start": "570c28a27ce14386b45c0b27bb530198",
+      "Start": "87aed933336544ea9633422c14360da0",
+      "End": "ce05bcf67d644b54a36dc6f64c8a4149",
+      "Id": "f48890b3713e4246a2a726ce651ecef9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0d6c4fb4eebc4010b6fddac8d466139e",
       "End": "0d2196c300da4d5991c97f1b29261af9",
-      "Id": "e6adc7c08d284ac09a3ceaadd659eb7f",
+      "Id": "4f23c39e26d3426b913aaa51641012da",
       "IsHidden": "False"
     },
     {
@@ -1234,8 +1234,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 321.29242432991663,
-    "Y": -442.13572448588184,
-    "Zoom": 0.35247404799478044
+    "X": -636.48571168647425,
+    "Y": -2766.261522071834,
+    "Zoom": 0.96871545250475977
   }
 }
