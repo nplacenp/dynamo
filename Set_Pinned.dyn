@@ -370,7 +370,7 @@
     {
       "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
       "NodeType": "BooleanInputNode",
-      "InputValue": true,
+      "InputValue": false,
       "Id": "0a240f5de98e4c30a1b3e4a6e230f928",
       "Inputs": [],
       "Outputs": [
@@ -518,119 +518,119 @@
     "ConnectorPins": [],
     "NodeViews": [
       {
-        "Name": "All Elements In Active View",
-        "ShowGeometry": true,
         "Id": "6c70c9a701a64f21bbffb35b8a689b32",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "All Elements In Active View",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 836.6534888370818,
         "Y": -437.75290595992487
       },
       {
-        "Name": "Element.SetPinnedStatus",
-        "ShowGeometry": true,
         "Id": "6f78d7e55b26451582efd2c78ccfcf7c",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Element.SetPinnedStatus",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 2836.6534888370816,
         "Y": -281.75290595992487
       },
       {
-        "Name": "Parameter.ParameterByName",
-        "ShowGeometry": true,
         "Id": "8f39b175cbeb4ced825c5733fda0acd4",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Parameter.ParameterByName",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 1213.6534888370818,
         "Y": -382.75290595992487
       },
       {
-        "Name": "Code Block",
-        "ShowGeometry": true,
         "Id": "ac4338843dc84ef6bcea4518ddd4d0f8",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 836.6534888370818,
         "Y": -288.92540595992489
       },
       {
-        "Name": "String from Object",
-        "ShowGeometry": true,
         "Id": "83490deeed4c446e98fb4ef93ac21aae",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "String from Object",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 1607.6534888370818,
         "Y": -382.75290595992487
       },
       {
-        "Name": "Code Block",
-        "ShowGeometry": true,
         "Id": "364dcc03f525427fa784953d829d566d",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 1607.6534888370818,
         "Y": -235.0979059599249
       },
       {
-        "Name": "String.Contains",
-        "ShowGeometry": true,
         "Id": "e63e5aba29634ab18d0f856ad4c1981a",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "String.Contains",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 1926.6534888370818,
         "Y": -428.75290595992487
       },
       {
-        "Name": "List.FilterByBoolMask",
-        "ShowGeometry": true,
         "Id": "453fc4007ad646058e68a82e99effc41",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 2501.6534888370816,
         "Y": -372.75290595992487
       },
       {
-        "Name": "||",
-        "ShowGeometry": true,
         "Id": "f90137b9ab6e4cb8ad86a35b0a57a953",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "||",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 2242.6534888370816,
         "Y": -338.75290595992487
       },
       {
-        "Name": "String.Contains",
-        "ShowGeometry": true,
         "Id": "0a55ed7dd1d940369d2412e8df3870e6",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "String.Contains",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 1926.6534888370818,
         "Y": -214.7529059599249
       },
       {
-        "Name": "Boolean",
-        "ShowGeometry": true,
         "Id": "0a240f5de98e4c30a1b3e4a6e230f928",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Boolean",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 2501.6534888370816,
         "Y": -190.7529059599249
       }
     ],
     "Annotations": [],
-    "X": 388.43300762476872,
-    "Y": 562.77194238310585,
-    "Zoom": 0.27079582990272616
+    "X": -981.45386609543812,
+    "Y": 896.37813925240346,
+    "Zoom": 1.2725101228102624
   }
 }
