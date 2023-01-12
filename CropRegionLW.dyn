@@ -1,0 +1,280 @@
+{
+  "Uuid": "e7c623ac-b305-433f-802f-29e3859d5b1b",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "CropRegionLW",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Rhythm.Revit.Views.ViewSection.OverrideCropVersion2@Revit.Elements.Element,int",
+      "Id": "4d7e890010084ea78d936762d7be6a38",
+      "Inputs": [
+        {
+          "Id": "dc20e8e50a1044e39761306364e57450",
+          "Name": "viewSection",
+          "Description": "The plan view to rotate\n\nElement",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b562fd37cc534952a164cbe7db6109d5",
+          "Name": "lineWeight",
+          "Description": "The lineweight to override to, (1-16)\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c7763cfeaa4d4c7c9cf5a72f1ce98750",
+          "Name": "viewSection",
+          "Description": "The overidden view.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "This node will override the crop region of the given section view based on the pen weight provided. This is the faster version that works with interior elevations.\n\nViewSection.OverrideCropVersion2 (viewSection: Element, lineWeight: int): Element"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Views.Sheet.Views",
+      "Id": "32c18e70e0f541bea974c9f0bdf6fc9a",
+      "Inputs": [
+        {
+          "Id": "bb728182299248f4b98fe03754d90400",
+          "Name": "sheet",
+          "Description": "Revit.Elements.Views.Sheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f41b829ced4c4557a59f2e2cd6832b2e",
+          "Name": "View[]",
+          "Description": "View[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Views on a Sheet\n\nSheet.Views: View[]"
+    },
+    {
+      "ConcreteType": "RhythmUI.Sheets, RhythmUI",
+      "SelectedIndex": 18,
+      "SelectedString": "A502 : INTERIOR ELEVATIONS",
+      "NodeType": "ExtensionNode",
+      "Id": "35b243a201694ffba908cf5d746aa753",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "18cbbfcddad24bebaf8f45c6b55b4a92",
+          "Name": "Sheet",
+          "Description": "The selected Sheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a sheet from all of the sheets in your project."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "df9bccf8e8634b17b777b28554537078",
+      "Inputs": [
+        {
+          "Id": "6da38b6da541449382afcb900fc235d0",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cc031e5e028f4028a5815a7b1581d817",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "5;",
+      "Id": "ff59456cc9ac40fcafca3d31377b2450",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f6cbe48c46ef4adda689219e382bd03a",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "f41b829ced4c4557a59f2e2cd6832b2e",
+      "End": "6da38b6da541449382afcb900fc235d0",
+      "Id": "f21bd3b7513949c9bd26af8078ffba44"
+    },
+    {
+      "Start": "18cbbfcddad24bebaf8f45c6b55b4a92",
+      "End": "bb728182299248f4b98fe03754d90400",
+      "Id": "aee3686e1ce44ea99e348fdfdcb111db"
+    },
+    {
+      "Start": "cc031e5e028f4028a5815a7b1581d817",
+      "End": "dc20e8e50a1044e39761306364e57450",
+      "Id": "aa86fc9edd7c4903a73ae816edd50d99"
+    },
+    {
+      "Start": "f6cbe48c46ef4adda689219e382bd03a",
+      "End": "b562fd37cc534952a164cbe7db6109d5",
+      "Id": "b1d68c783b9c409f9e854045a82044a1"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Rhythm",
+      "Version": "2021.4.2",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "4d7e890010084ea78d936762d7be6a38",
+        "35b243a201694ffba908cf5d746aa753"
+      ]
+    }
+  ],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.3.0.5885",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "ʳʰʸᵗʰᵐ|ViewSection.OverrideCropVersion2",
+        "Id": "4d7e890010084ea78d936762d7be6a38",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 823.06410938753936,
+        "Y": 344.798566102749
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.Views",
+        "Id": "32c18e70e0f541bea974c9f0bdf6fc9a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 11.007421706434002,
+        "Y": 347.68894712183874
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SHEET SELECTION",
+        "Id": "35b243a201694ffba908cf5d746aa753",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -343.93497440618023,
+        "Y": 351.8904387578699
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "VIEW LIST",
+        "Id": "df9bccf8e8634b17b777b28554537078",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 373.15370072242831,
+        "Y": 343.3364720608833
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "LINEWEIGHT",
+        "Id": "ff59456cc9ac40fcafca3d31377b2450",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 680.06214588529645,
+        "Y": 467.72035751154527
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "fcfeb64ce065475a97bf724ba03900ba",
+        "Title": "^^^DOWNLOAD 'RHYTHM' FROM PACKAGE MANAGER TAB ABOVE^^^\r\n\r\nCLICK 'RUN' AT BOTTOM LEFT AFTER SHEET SELECTION",
+        "Nodes": [],
+        "Left": -341.69725578124951,
+        "Top": 247.09899414621674,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 665.45269458219036,
+    "Y": 556.7279860337203,
+    "Zoom": 0.9435219507933702
+  }
+}
