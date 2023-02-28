@@ -1,0 +1,7 @@
+Floor 01	3000
+Floor 02 	7000
+Floor 03	10000
+Floor 04	12500
+Floor 05	15000
+Floor 06 	18000
+Floor 07 	21500

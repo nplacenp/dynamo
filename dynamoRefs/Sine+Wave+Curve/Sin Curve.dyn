@@ -1,0 +1,652 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Sin Curve",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "66049c4a0f514c9b926757fef5892f62",
+      "Inputs": [
+        {
+          "Id": "062c47c3db3b4182b5e6ca19c031fa45",
+          "Name": "x",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ddf211e7eb2d4d33873794548b13ac71",
+          "Name": "y",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5229e1b11d0f4f46ab7bc5fd5d475376",
+          "Name": "z",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "206767bfe3744a82af03e0a44f11949f",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Form a Point given 3 cartesian coordinates\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..100..#amount;",
+      "Id": "3dc61f0f224f4130865f8626b001c874",
+      "Inputs": [
+        {
+          "Id": "a624d211e6bb4599bd6246ea95bea923",
+          "Name": "amount",
+          "Description": "amount",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0f6a00cf7b554250940bf1b09177bb94",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Sin@double",
+      "Id": "460cb677a2ba409589d252dd24def59e",
+      "Inputs": [
+        {
+          "Id": "4f8a29a229d64ceaa83bf31eb2c715b1",
+          "Name": "angle",
+          "Description": "Angle in degrees to take the sine of.\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9d40fdfd5b90454a8603691c290238d0",
+          "Name": "sin",
+          "Description": "Sine of the angle.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Finds the sine of an angle.\n\nMath.Sin (angle: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..360..#amount;",
+      "Id": "b54381b5e23e4cd8beb0089aa4a1e1f8",
+      "Inputs": [
+        {
+          "Id": "e1760fa5d1fd446490c84a1333e5d847",
+          "Name": "amount",
+          "Description": "amount",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e1c6806e627f4781ac474208e3847a75",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Integer",
+      "InputValue": 10,
+      "MaximumValue": 100,
+      "MinimumValue": 3,
+      "StepValue": 1,
+      "Id": "7aca45e4b62c4e03932113828ff3fde4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "622eb9795f184a8ab5bf3e62f384b157",
+          "Name": "",
+          "Description": "Int32",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces integer values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "value*scale;",
+      "Id": "c7513863b36a4a88a5e68a96d0539b26",
+      "Inputs": [
+        {
+          "Id": "cb0c752aaa574c6282e0089d143eec2d",
+          "Name": "value",
+          "Description": "value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8f1dbeda21d749a9971d6691a7a9cbdb",
+          "Name": "scale",
+          "Description": "scale",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "475a2308f2ae4e1b8a35c2ec30a9e0bc",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Integer",
+      "InputValue": 20,
+      "MaximumValue": 100,
+      "MinimumValue": 0,
+      "StepValue": 1,
+      "Id": "bde39fb35e0848c3983723b8d331a835",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2a3508e4ad10454e93935245e18b00c7",
+          "Name": "",
+          "Description": "Int32",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces integer values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.Extrude@Autodesk.DesignScript.Geometry.Vector,double",
+      "Id": "7d499272e74a42159a6b6cbd08146403",
+      "Inputs": [
+        {
+          "Id": "0ced9c6d73c3470fb10c429c05ffd748",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d9cf3150fdad4665ac3e81b05ed96120",
+          "Name": "direction",
+          "Description": "Vector to extrude along\n\nVector\nDefault value : Autodesk.DesignScript.Geometry.Vector.ByCoordinates(0, 0, 1)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6c6891981d714775a850c4352b0de805",
+          "Name": "distance",
+          "Description": "Distance to extrude\n\ndouble\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c7f8dbe541dc40439de93baa18f3c111",
+          "Name": "Surface",
+          "Description": "The extruded Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Extrudes a Curve in the specified direction, by the specified distance\n\nCurve.Extrude (direction: Vector = Autodesk.DesignScript.Geometry.Vector.ByCoordinates(0, 0, 1), distance: double = 1): Surface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "100;",
+      "Id": "d78c3130e3774a0893d791806e00e303",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c261a5c0fa3845938d99922f2e0292ad",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.YAxis",
+      "Id": "8639f8c4b1a84850b90fc9425a3d177c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "bfdc4894df35476da399bc52256aa09e",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the canonical Y axis Vector (0,1,0)\n\nVector.YAxis ( ): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "value*definition;",
+      "Id": "4c48b49d023f4d06843536effe60ca25",
+      "Inputs": [
+        {
+          "Id": "97070d1ceb60497bb07f0d92aff4df2f",
+          "Name": "value",
+          "Description": "value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3575269c2487465cb81125237bce603d",
+          "Name": "definition",
+          "Description": "definition",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8568a68df2d4462fb8bffc78418ae581",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Integer",
+      "InputValue": 1,
+      "MaximumValue": 10,
+      "MinimumValue": 1,
+      "StepValue": 1,
+      "Id": "fbfec2aaaf2e4867b1661c40a0013ea6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0e18afccc0d6473bb665796ce8f0bdf4",
+          "Name": "",
+          "Description": "Int32",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces integer values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.NurbsCurve.ByPoints@Autodesk.DesignScript.Geometry.Point[]",
+      "Id": "0a05ceccf8184e048f37f3148db8e1b6",
+      "Inputs": [
+        {
+          "Id": "0d679ec64f2c409fa9e634a664b350f1",
+          "Name": "points",
+          "Description": "Point[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1c75470380184254982fd272564ca437",
+          "Name": "NurbsCurve",
+          "Description": "NurbsCurve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a BSplineCurve by interpolating between points.\n\nNurbsCurve.ByPoints (points: Point[]): NurbsCurve"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "206767bfe3744a82af03e0a44f11949f",
+      "End": "0d679ec64f2c409fa9e634a664b350f1",
+      "Id": "34d41d04839f4ae29c8f0531f54e68e6"
+    },
+    {
+      "Start": "0f6a00cf7b554250940bf1b09177bb94",
+      "End": "062c47c3db3b4182b5e6ca19c031fa45",
+      "Id": "077528543afa44e694589d1f10d8d63b"
+    },
+    {
+      "Start": "0f6a00cf7b554250940bf1b09177bb94",
+      "End": "ddf211e7eb2d4d33873794548b13ac71",
+      "Id": "611ecc0495074a9f900f0e34cf2751a3"
+    },
+    {
+      "Start": "9d40fdfd5b90454a8603691c290238d0",
+      "End": "cb0c752aaa574c6282e0089d143eec2d",
+      "Id": "51e0e006fe0946d0957d95f754914466"
+    },
+    {
+      "Start": "e1c6806e627f4781ac474208e3847a75",
+      "End": "97070d1ceb60497bb07f0d92aff4df2f",
+      "Id": "1f0b0926dcb245fc86182057ce413d22"
+    },
+    {
+      "Start": "622eb9795f184a8ab5bf3e62f384b157",
+      "End": "e1760fa5d1fd446490c84a1333e5d847",
+      "Id": "36bdf35c9f7f4abf8134193d3df053e0"
+    },
+    {
+      "Start": "622eb9795f184a8ab5bf3e62f384b157",
+      "End": "a624d211e6bb4599bd6246ea95bea923",
+      "Id": "a54a60a2e70d40eda2a2ee5f61181c44"
+    },
+    {
+      "Start": "475a2308f2ae4e1b8a35c2ec30a9e0bc",
+      "End": "5229e1b11d0f4f46ab7bc5fd5d475376",
+      "Id": "3fbbbc8070b04720a52d5b7211183ca4"
+    },
+    {
+      "Start": "2a3508e4ad10454e93935245e18b00c7",
+      "End": "8f1dbeda21d749a9971d6691a7a9cbdb",
+      "Id": "22bc98507bd04d8dbf6a8cd9f320c4f2"
+    },
+    {
+      "Start": "c261a5c0fa3845938d99922f2e0292ad",
+      "End": "6c6891981d714775a850c4352b0de805",
+      "Id": "d8eb713e82314e43b405c9f52f213e57"
+    },
+    {
+      "Start": "bfdc4894df35476da399bc52256aa09e",
+      "End": "d9cf3150fdad4665ac3e81b05ed96120",
+      "Id": "dddfa6da2f804314b2f7d7c211b18b28"
+    },
+    {
+      "Start": "8568a68df2d4462fb8bffc78418ae581",
+      "End": "4f8a29a229d64ceaa83bf31eb2c715b1",
+      "Id": "9c23d30703804ab59b6c9892cba85dd1"
+    },
+    {
+      "Start": "0e18afccc0d6473bb665796ce8f0bdf4",
+      "End": "3575269c2487465cb81125237bce603d",
+      "Id": "24f24dd7621148278846f5ea781be130"
+    },
+    {
+      "Start": "1c75470380184254982fd272564ca437",
+      "End": "0ced9c6d73c3470fb10c429c05ffd748",
+      "Id": "0b5783eda1324c53ac4ae48119ba2ff9"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.3.0.5885",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 257.21635887871315,
+      "EyeY": 196.16248715415739,
+      "EyeZ": 455.26526692787974,
+      "LookX": -262.21635887871315,
+      "LookY": -185.16248715415739,
+      "LookZ": -463.26526692787974,
+      "UpX": -0.058324023457103427,
+      "UpY": 0.99296550810652173,
+      "UpZ": -0.10304274840327954
+    },
+    "NodeViews": [
+      {
+        "Id": "66049c4a0f514c9b926757fef5892f62",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Point.ByCoordinates",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 694.94203162949134,
+        "Y": 314.96736724957555
+      },
+      {
+        "Id": "3dc61f0f224f4130865f8626b001c874",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 166.48525801487983,
+        "Y": 289.21310618502662
+      },
+      {
+        "Id": "460cb677a2ba409589d252dd24def59e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Math.Sin",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 374.86517341332825,
+        "Y": -75.702844107907282
+      },
+      {
+        "Id": "b54381b5e23e4cd8beb0089aa4a1e1f8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 18.266400373602664,
+        "Y": -82.2361877304051
+      },
+      {
+        "Id": "7aca45e4b62c4e03932113828ff3fde4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Integer Slider",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": -271.25833094052496,
+        "Y": 69.032106478124859
+      },
+      {
+        "Id": "c7513863b36a4a88a5e68a96d0539b26",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 614.6672646802042,
+        "Y": -68.642348837299181
+      },
+      {
+        "Id": "bde39fb35e0848c3983723b8d331a835",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Integer Slider",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": -216.26099699283645,
+        "Y": 263.72551756083908
+      },
+      {
+        "Id": "7d499272e74a42159a6b6cbd08146403",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Curve.Extrude",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1370.2037559660819,
+        "Y": 516.82773202177441
+      },
+      {
+        "Id": "d78c3130e3774a0893d791806e00e303",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 950.22543820717374,
+        "Y": 728.23632519335
+      },
+      {
+        "Id": "8639f8c4b1a84850b90fc9425a3d177c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Vector.YAxis",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 926.84190722068183,
+        "Y": 626.10376004973648
+      },
+      {
+        "Id": "4c48b49d023f4d06843536effe60ca25",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 272.99423056479441,
+        "Y": -174.69261662316771
+      },
+      {
+        "Id": "fbfec2aaaf2e4867b1661c40a0013ea6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Integer Slider",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": -266.78747067041274,
+        "Y": -148.52954349952284
+      },
+      {
+        "Id": "0a05ceccf8184e048f37f3148db8e1b6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "NurbsCurve.ByPoints",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 983.96727808031937,
+        "Y": 313.14922693078023
+      }
+    ],
+    "Annotations": [],
+    "X": 170.21159929067198,
+    "Y": 242.82768484677581,
+    "Zoom": 0.76655075795131589
+  }
+}

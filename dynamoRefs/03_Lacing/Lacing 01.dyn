@@ -1,0 +1,673 @@
+{
+  "Uuid": "9c634d1f-68b8-413c-93e3-6d89a156be86",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Lacing 01",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "76a284261cf34cadbe7871a82f99318e",
+      "Inputs": [
+        {
+          "Id": "c2aa334c0d1648858241fcc0abf78e91",
+          "Name": "x",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "07ee13f88a834e06a7d3123b0463d92d",
+          "Name": "y",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "61b20b37fd1c4c90a58b5e775b1a3ce5",
+          "Name": "z",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ed0a13ec267a485b898f12fa3aa5d66c",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "CrossProduct",
+      "Description": "Form a Point given 3 cartesian coordinates\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..5;",
+      "Id": "501337c77325412b91eb2a437f6a9306",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "68eaedf10be34746be6f1da4824c1ff8",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "8140daa1a64043809ef301cd83ff2c66",
+      "Inputs": [
+        {
+          "Id": "e62ccfe582414726abb2470f20eb9cc6",
+          "Name": "x",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e6aafbc58316460892f082e12ca51195",
+          "Name": "y",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a3ed8e9a2a2e45c3b7d039e6d800ef61",
+          "Name": "z",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e6b204fb1ba44cd9b4d111f07601dbc9",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "CrossProduct",
+      "Description": "Form a Point given 3 cartesian coordinates\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..10;",
+      "Id": "813e76b77aba4138a33fbc637f522db1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "dc6a9c9c9e8a4203bd00dd167c3fe0c4",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "10;",
+      "Id": "f982a85f12ae446fbe34541563a16526",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8ff526569dc04c96908c8d0371103548",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point",
+      "Id": "44d698cdd7554c018ef85a57a5f11f1d",
+      "Inputs": [
+        {
+          "Id": "3789dcdad94a49b7ba1450bf70eb4dc4",
+          "Name": "startPoint",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9d3fba9dc4a34a05a6fb2fe501037625",
+          "Name": "endPoint",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "aec992ce46f346d588c6a6846d34e5d3",
+          "Name": "Line",
+          "Description": "Line",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Creates a straight Line between two input Points.\n\nLine.ByStartPointEndPoint (startPoint: Point, endPoint: Point): Line"
+    },
+    {
+      "ConcreteType": "Watch3DNodeModels.Watch3D, Watch3DNodeModels",
+      "WatchWidth": 200.0,
+      "WatchHeight": 200.0,
+      "WasExecuted": true,
+      "Camera": {
+        "Name": "314dd0da-f1a4-4115-919d-50e78d845fe5 Preview",
+        "EyeX": -17.0,
+        "EyeY": 24.0,
+        "EyeZ": 50.0,
+        "LookX": 12.0,
+        "LookY": -13.0,
+        "LookZ": -58.0,
+        "UpX": 0.0,
+        "UpY": 1.0,
+        "UpZ": 0.0
+      },
+      "NodeType": "ExtensionNode",
+      "Id": "314dd0daf1a44115919d50e78d845fe5",
+      "Inputs": [
+        {
+          "Id": "33f20a34d4c44beb8a7927e7cdba177f",
+          "Name": "",
+          "Description": "Incoming geometry objects.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "baa6b34a34634528a6edd8ffd69ff91d",
+          "Name": "",
+          "Description": "Incoming geometry objects.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Shows a dynamic preview of geometry."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point",
+      "Id": "3b229135b90c46088775adcef75d34ea",
+      "Inputs": [
+        {
+          "Id": "76e891402fb641e7879f8a47f55e145a",
+          "Name": "startPoint",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c93869fae7f84f7bb50bd1cf09032547",
+          "Name": "endPoint",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "58c249516b064d05a8f2272a16862b9c",
+          "Name": "Line",
+          "Description": "Line",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Longest",
+      "Description": "Creates a straight Line between two input Points.\n\nLine.ByStartPointEndPoint (startPoint: Point, endPoint: Point): Line"
+    },
+    {
+      "ConcreteType": "Watch3DNodeModels.Watch3D, Watch3DNodeModels",
+      "WatchWidth": 200.0,
+      "WatchHeight": 200.0,
+      "WasExecuted": true,
+      "Camera": {
+        "Name": "4e98b43a-74c1-47bf-8cda-0d085a8aca7b Preview",
+        "EyeX": -17.0,
+        "EyeY": 24.0,
+        "EyeZ": 50.0,
+        "LookX": 12.0,
+        "LookY": -13.0,
+        "LookZ": -58.0,
+        "UpX": 0.0,
+        "UpY": 1.0,
+        "UpZ": 0.0
+      },
+      "NodeType": "ExtensionNode",
+      "Id": "4e98b43a74c147bf8cda0d085a8aca7b",
+      "Inputs": [
+        {
+          "Id": "36e233bc2d854b2ab3c6b671bb75635d",
+          "Name": "",
+          "Description": "Incoming geometry objects.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b1279a8f0df44815a398d2fccb2f3a32",
+          "Name": "",
+          "Description": "Incoming geometry objects.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Shows a dynamic preview of geometry."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point",
+      "Id": "5fb96adf610045b4a63489f3f348ef6f",
+      "Inputs": [
+        {
+          "Id": "1be48893b09f46a987b66fc39de070e9",
+          "Name": "startPoint",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "532032d62488467b868ee6e31b7856a6",
+          "Name": "endPoint",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a7bd44aea4934549bfc7a23fc2034d7b",
+          "Name": "Line",
+          "Description": "Line",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "CrossProduct",
+      "Description": "Creates a straight Line between two input Points.\n\nLine.ByStartPointEndPoint (startPoint: Point, endPoint: Point): Line"
+    },
+    {
+      "ConcreteType": "Watch3DNodeModels.Watch3D, Watch3DNodeModels",
+      "WatchWidth": 200.0,
+      "WatchHeight": 200.0,
+      "WasExecuted": true,
+      "Camera": {
+        "Name": "3afac6c5-fedb-49ad-8f99-a2a2aea9d485 Preview",
+        "EyeX": -17.0,
+        "EyeY": 24.0,
+        "EyeZ": 50.0,
+        "LookX": 12.0,
+        "LookY": -13.0,
+        "LookZ": -58.0,
+        "UpX": 0.0,
+        "UpY": 1.0,
+        "UpZ": 0.0
+      },
+      "NodeType": "ExtensionNode",
+      "Id": "3afac6c5fedb49ad8f99a2a2aea9d485",
+      "Inputs": [
+        {
+          "Id": "fa88d977a5154dcf8c4b13b42b7c8faf",
+          "Name": "",
+          "Description": "Incoming geometry objects.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6e1509b69a7e4d16821a0f80b17286e7",
+          "Name": "",
+          "Description": "Incoming geometry objects.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Shows a dynamic preview of geometry."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "ed0a13ec267a485b898f12fa3aa5d66c",
+      "End": "76e891402fb641e7879f8a47f55e145a",
+      "Id": "f218521196024c41ad8b1739e9bdaef1"
+    },
+    {
+      "Start": "ed0a13ec267a485b898f12fa3aa5d66c",
+      "End": "1be48893b09f46a987b66fc39de070e9",
+      "Id": "22a3c318ef2c4bf89819f76a78a0254f"
+    },
+    {
+      "Start": "ed0a13ec267a485b898f12fa3aa5d66c",
+      "End": "3789dcdad94a49b7ba1450bf70eb4dc4",
+      "Id": "291dfceb737447cba0ec2f0b837b7b8c"
+    },
+    {
+      "Start": "68eaedf10be34746be6f1da4824c1ff8",
+      "End": "c2aa334c0d1648858241fcc0abf78e91",
+      "Id": "d2b393fd30eb400fbd1c443436cd149b"
+    },
+    {
+      "Start": "e6b204fb1ba44cd9b4d111f07601dbc9",
+      "End": "9d3fba9dc4a34a05a6fb2fe501037625",
+      "Id": "03d35eb532a447148ca5c7f295e0467c"
+    },
+    {
+      "Start": "e6b204fb1ba44cd9b4d111f07601dbc9",
+      "End": "c93869fae7f84f7bb50bd1cf09032547",
+      "Id": "1b0c0ce04f1644f2a151906b92bcaccc"
+    },
+    {
+      "Start": "e6b204fb1ba44cd9b4d111f07601dbc9",
+      "End": "532032d62488467b868ee6e31b7856a6",
+      "Id": "970bee252c374725a992e291991701e2"
+    },
+    {
+      "Start": "dc6a9c9c9e8a4203bd00dd167c3fe0c4",
+      "End": "e62ccfe582414726abb2470f20eb9cc6",
+      "Id": "287bdaaece4045baa128a36aac3de69b"
+    },
+    {
+      "Start": "8ff526569dc04c96908c8d0371103548",
+      "End": "e6aafbc58316460892f082e12ca51195",
+      "Id": "5736394c3a9e4563b6e1271c8cff6812"
+    },
+    {
+      "Start": "aec992ce46f346d588c6a6846d34e5d3",
+      "End": "33f20a34d4c44beb8a7927e7cdba177f",
+      "Id": "73a36535c96d4c029cd3f7c2b363ccb2"
+    },
+    {
+      "Start": "58c249516b064d05a8f2272a16862b9c",
+      "End": "36e233bc2d854b2ab3c6b671bb75635d",
+      "Id": "2cbdbdb8046741a885e0a4e167cdb3b1"
+    },
+    {
+      "Start": "a7bd44aea4934549bfc7a23fc2034d7b",
+      "End": "fa88d977a5154dcf8c4b13b42b7c8faf",
+      "Id": "c000b5421993470b966276d20a10c534"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.3.0.5885",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "76a284261cf34cadbe7871a82f99318e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 262.05686532522395,
+        "Y": 547.4935415550799
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "501337c77325412b91eb2a437f6a9306",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -38.756466453416579,
+        "Y": 550.38719324911415
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "8140daa1a64043809ef301cd83ff2c66",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 269.96115570557333,
+        "Y": 701.2722092351421
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "813e76b77aba4138a33fbc637f522db1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -46.0,
+        "Y": 703.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "f982a85f12ae446fbe34541563a16526",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -38.0,
+        "Y": 785.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Line.ByStartPointEndPoint",
+        "Id": "44d698cdd7554c018ef85a57a5f11f1d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 651.47513141965032,
+        "Y": 590.77081699243956
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch 3D",
+        "Id": "314dd0daf1a44115919d50e78d845fe5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 913.46498252027038,
+        "Y": 549.38076491841241
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Line.ByStartPointEndPoint",
+        "Id": "3b229135b90c46088775adcef75d34ea",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 645.48874174586547,
+        "Y": 1161.2941921426418
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch 3D",
+        "Id": "4e98b43a74c147bf8cda0d085a8aca7b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 884.7228972150433,
+        "Y": 1160.0242146770581
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Line.ByStartPointEndPoint",
+        "Id": "5fb96adf610045b4a63489f3f348ef6f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 649.0164440746488,
+        "Y": 1588.3475950086431
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch 3D",
+        "Id": "3afac6c5fedb49ad8f99a2a2aea9d485",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 896.08901694349436,
+        "Y": 1573.0581495575154
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "dde4b6b88436447f93ea6bcaab857758",
+        "Title": "Lacing: Shortest",
+        "Nodes": [
+          "44d698cdd7554c018ef85a57a5f11f1d",
+          "314dd0daf1a44115919d50e78d845fe5"
+        ],
+        "Left": 641.47513141965032,
+        "Top": 496.38076491841241,
+        "Width": 491.98985110062006,
+        "Height": 331.0,
+        "FontSize": 36.0,
+        "InitialTop": 549.38076491841241,
+        "InitialHeight": 186.39005207402715,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "48751a924b4c4c00873e2a4e6025174d",
+        "Title": "Lacing: Longest",
+        "Nodes": [
+          "3b229135b90c46088775adcef75d34ea",
+          "4e98b43a74c147bf8cda0d085a8aca7b"
+        ],
+        "Left": 635.48874174586547,
+        "Top": 1107.0242146770581,
+        "Width": 469.23415546917784,
+        "Height": 331.0,
+        "FontSize": 36.0,
+        "InitialTop": 1160.0242146770581,
+        "InitialHeight": 146.26997746558368,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "3aa3b90e33514d659c28a4ec1d6a87f1",
+        "Title": "Lacing: Cross Product",
+        "Nodes": [
+          "5fb96adf610045b4a63489f3f348ef6f",
+          "3afac6c5fedb49ad8f99a2a2aea9d485"
+        ],
+        "Left": 639.0164440746488,
+        "Top": 1520.0581495575154,
+        "Width": 477.07257286884555,
+        "Height": 331.0,
+        "FontSize": 36.0,
+        "InitialTop": 1573.0581495575154,
+        "InitialHeight": 160.28944545112768,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 439.64805510759879,
+    "Y": 261.35915567805966,
+    "Zoom": 0.181160323969063
+  }
+}

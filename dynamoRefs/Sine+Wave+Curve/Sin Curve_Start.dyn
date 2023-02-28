@@ -1,0 +1,263 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Sin Curve_Start",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Sin@double",
+      "Id": "460cb677a2ba409589d252dd24def59e",
+      "Inputs": [
+        {
+          "Id": "4f8a29a229d64ceaa83bf31eb2c715b1",
+          "Name": "angle",
+          "Description": "Angle in degrees to take the sine of.\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9d40fdfd5b90454a8603691c290238d0",
+          "Name": "sin",
+          "Description": "Sine of the angle.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Finds the sine of an angle.\n\nMath.Sin (angle: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..360..#amount;",
+      "Id": "b54381b5e23e4cd8beb0089aa4a1e1f8",
+      "Inputs": [
+        {
+          "Id": "e1760fa5d1fd446490c84a1333e5d847",
+          "Name": "amount",
+          "Description": "amount",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e1c6806e627f4781ac474208e3847a75",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Integer",
+      "InputValue": 10,
+      "MaximumValue": 100,
+      "MinimumValue": 3,
+      "StepValue": 1,
+      "Id": "7aca45e4b62c4e03932113828ff3fde4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "622eb9795f184a8ab5bf3e62f384b157",
+          "Name": "",
+          "Description": "Int32",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces integer values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "value*definition;",
+      "Id": "4c48b49d023f4d06843536effe60ca25",
+      "Inputs": [
+        {
+          "Id": "97070d1ceb60497bb07f0d92aff4df2f",
+          "Name": "value",
+          "Description": "value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3575269c2487465cb81125237bce603d",
+          "Name": "definition",
+          "Description": "definition",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8568a68df2d4462fb8bffc78418ae581",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.IntegerSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Integer",
+      "InputValue": 1,
+      "MaximumValue": 10,
+      "MinimumValue": 1,
+      "StepValue": 1,
+      "Id": "fbfec2aaaf2e4867b1661c40a0013ea6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0e18afccc0d6473bb665796ce8f0bdf4",
+          "Name": "",
+          "Description": "Int32",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces integer values."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "e1c6806e627f4781ac474208e3847a75",
+      "End": "97070d1ceb60497bb07f0d92aff4df2f",
+      "Id": "1f0b0926dcb245fc86182057ce413d22"
+    },
+    {
+      "Start": "622eb9795f184a8ab5bf3e62f384b157",
+      "End": "e1760fa5d1fd446490c84a1333e5d847",
+      "Id": "36bdf35c9f7f4abf8134193d3df053e0"
+    },
+    {
+      "Start": "8568a68df2d4462fb8bffc78418ae581",
+      "End": "4f8a29a229d64ceaa83bf31eb2c715b1",
+      "Id": "9c23d30703804ab59b6c9892cba85dd1"
+    },
+    {
+      "Start": "0e18afccc0d6473bb665796ce8f0bdf4",
+      "End": "3575269c2487465cb81125237bce603d",
+      "Id": "24f24dd7621148278846f5ea781be130"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.3.0.5885",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 257.21635887871315,
+      "EyeY": 196.16248715415739,
+      "EyeZ": 455.26526692787974,
+      "LookX": -262.21635887871315,
+      "LookY": -185.16248715415739,
+      "LookZ": -463.26526692787974,
+      "UpX": -0.058324023457103427,
+      "UpY": 0.99296550810652173,
+      "UpZ": -0.10304274840327954
+    },
+    "NodeViews": [
+      {
+        "Id": "460cb677a2ba409589d252dd24def59e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Math.Sin",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 389.05299584912683,
+        "Y": -80.862052266379436
+      },
+      {
+        "Id": "b54381b5e23e4cd8beb0089aa4a1e1f8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 18.266400373602664,
+        "Y": -82.2361877304051
+      },
+      {
+        "Id": "7aca45e4b62c4e03932113828ff3fde4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Integer Slider",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": -271.25833094052496,
+        "Y": 69.032106478124859
+      },
+      {
+        "Id": "4c48b49d023f4d06843536effe60ca25",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 189.15709798962166,
+        "Y": -201.77845945514659
+      },
+      {
+        "Id": "fbfec2aaaf2e4867b1661c40a0013ea6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Integer Slider",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": -266.78747067041274,
+        "Y": -148.52954349952284
+      }
+    ],
+    "Annotations": [],
+    "X": 295.55586262888153,
+    "Y": 250.0495281471506,
+    "Zoom": 0.62025022090747184
+  }
+}

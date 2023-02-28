@@ -1,0 +1,263 @@
+{
+  "Uuid": "35af5746-2a0c-470d-8077-8af02f189c98",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Points Square Lacing",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "841b5c6599784986b0150db9d9a8e64e",
+      "Inputs": [
+        {
+          "Id": "05634c0299d44d579e3a9b5d90c87dad",
+          "Name": "x",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "179510912cb74a42970de8fd8bf581a9",
+          "Name": "y",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2cbfba47fbfe4f38be75450cc8afa77e",
+          "Name": "z",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "90c4230d8fca4a4d99f9438de1c03d2c",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "CrossProduct",
+      "Description": "Form a Point given 3 cartesian coordinates\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Sequence, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "017862de8618404ab7a65b56994f0730",
+      "Inputs": [
+        {
+          "Id": "65e3e14a30604aff9eb5065496f798c7",
+          "Name": "start",
+          "Description": "Number or letter to start the sequence at\r\nDefault value: 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "46902f45c8a14d038088d5597ac8f8cf",
+          "Name": "amount",
+          "Description": "Amount of numbers in the sequence\r\nDefault value: 10",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2945a7be04d446358289f602a71ba7e2",
+          "Name": "step",
+          "Description": "Space between numbers or letters\r\nDefault value: 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2a0780e8313d4800be9a4ebd1087601f",
+          "Name": "seq",
+          "Description": "New sequence",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a sequence of numbers."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Sequence, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "a07b57924b3a463dbcd09c69494421f7",
+      "Inputs": [
+        {
+          "Id": "fe4cd3e6cb2c447ea80110647af18d03",
+          "Name": "start",
+          "Description": "Number or letter to start the sequence at\r\nDefault value: 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "77f86862797c49beae742f0dc161aa1e",
+          "Name": "amount",
+          "Description": "Amount of numbers in the sequence\r\nDefault value: 10",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a993fdc28ebd4db693aa1fe0c4c9576d",
+          "Name": "step",
+          "Description": "Space between numbers or letters\r\nDefault value: 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a1e3d7201ff34011a4227564a5e0c2a2",
+          "Name": "seq",
+          "Description": "New sequence",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a sequence of numbers."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "5;",
+      "Id": "2f2fc5ccfe84450fa0cb16dd7ed2fc73",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4169c1671ff14e74add87d6345585335",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "2a0780e8313d4800be9a4ebd1087601f",
+      "End": "05634c0299d44d579e3a9b5d90c87dad",
+      "Id": "a8a52dbcae304f3d9291edbabd9a0c08"
+    },
+    {
+      "Start": "a1e3d7201ff34011a4227564a5e0c2a2",
+      "End": "179510912cb74a42970de8fd8bf581a9",
+      "Id": "2ab16d6f797b4c178d440f1f9cc4fc1b"
+    },
+    {
+      "Start": "4169c1671ff14e74add87d6345585335",
+      "End": "77f86862797c49beae742f0dc161aa1e",
+      "Id": "cc307c34fac5454db9be2c921aedec8b"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.3.0.5885",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -1.890262363536273,
+      "EyeY": 37.956793170989485,
+      "EyeZ": 48.915968600725392,
+      "LookX": 11.795205782194307,
+      "LookY": -12.778139597377166,
+      "LookZ": -57.010161280605843,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "841b5c6599784986b0150db9d9a8e64e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 861.02393683902835,
+        "Y": 54.429623068603689
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sequence",
+        "Id": "017862de8618404ab7a65b56994f0730",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 244.79999999999978,
+        "Y": 32.800000000000011
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sequence",
+        "Id": "a07b57924b3a463dbcd09c69494421f7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 242.76682579754498,
+        "Y": 392.15414677530691
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "2f2fc5ccfe84450fa0cb16dd7ed2fc73",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3.0,
+        "Y": 456.0
+      }
+    ],
+    "Annotations": [],
+    "X": 214.20351670494762,
+    "Y": -20.899875604721956,
+    "Zoom": 0.74769281712332525
+  }
+}
